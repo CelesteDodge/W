@@ -1,4 +1,4 @@
-site_id,utm_E,utm_N,locationAccuracy,soilType,geology,forestType,SoilBurnSeverity,grainSize,suctionSetting,landbase/property,comments
+site_id,utm_E,utm_N,locationAccuracy,soilType,geology,forestType,SoilBurnSeverity,grainSize,suctionSetting,landbaseProperty,comments
 PMD01,,,,,Franciscan,Herbaceous,Very Low,,,Pepperwood,at GLM
 PMD02,527301.8,4268723.4,bad elf X cm,,Serpentinite,Shrubland,Moderate,,,Pepperwood,
 PMD03,525500.9,4270407.4,bad elf X cm,,Franciscan,Herbaceous,Very Low,,,Pepperwood,at GLM
