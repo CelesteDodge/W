@@ -1,1 +1,9 @@
-﻿
+﻿Equipment for measuring infiltration are 2.5 centimeter radius mini disk infiltrometers with steel disks.
+Sites were falgged and precise location marked in 2018 with four nails in a 5 inch square at the center of which measurements were taken from 2018 on.
+
+Pre-fire mini disk observations were collected at Pepperwood between October of 2015 and April of 2016. 
+This baseline data was taken at point locations estimated to be within 1 meter of the marked locations established in 2018.
+Each site was measured once during the 7-month pre-fire period, and between 28 and 60 observations were taken per transect, or from less than 6 up to 12 observations at each point.
+Pre-fire soil water infiltration was measured according to user decagon mini disk manual specifications, with the use of diatamaceous earth at the point of contact.
+Additionally soil carbon and soil bulk density were taken before the fire at all grassland transect sites, 
+following methodologies were based upon the soil sampling methods described in the Point Blue Rangeland Monitoring Networks Handbook of Field Methods.
