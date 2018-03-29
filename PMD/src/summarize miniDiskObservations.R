@@ -8,10 +8,10 @@
 #__Step 1_______Read in the data and look at it
 rm(list=ls())
 
-setwd("C:/Users/cdodge/Documents/R/PMD")
+setwd("C:/Users/cdodge/Desktop/GIT/W/PMD")
 getwd()
 
-obs <- read.csv("miniDiskObs.csv")
+obs <- read.csv("miniDiskObservations.csv")
 head(obs)
 
 #__Step 2_______Crunch basic stats about the survey observations
@@ -32,7 +32,6 @@ head(maxVolume)
 vols <- merge(maxVolume, minVolume, by.x="survey_id", by.y="survey_id")
 vols$deltaVolume <- vols$volume.x - vols$volume.y
 head(vols)
-volumeInfiltrated <-
 #remove 'start and end volumes (x,y) column
 keep <- c("survey_id", "deltaVolume")
 delta <- vols[keep]
@@ -53,5 +52,5 @@ fullSummary <- merge(minutes, summary, by.x="survey_id", by.y="survey_id")
 head(fullSummary)
 
 #Write the data as a summary file
-write.csv(fullSummary, file = "surveySummary3_March2018.csv")
+write.csv(fullSummary, file = "surveySummaryTable.csv")
 
