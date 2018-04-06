@@ -1,4 +1,4 @@
-SurveyID_3,grasslandTransect,samplePointNumber,Sampler(s),Date,Suction Rate (cm),mililitersInfiltratedPerSecond
+SurveyID,grasslandTransect,samplePointNumber,Sampler(s),Date,Suction Rate (cm),mililitersInfiltratedPerSecond
 Har01_1_15-11-17,Har01,1,WH,11/17/2015,1,0.024404762
 Har01_2_15-11-17,Har01,2,WH,11/17/2015,1,0.08125
 Har01_3_15-11-17,Har01,3,WH,11/17/2015,1,0.058333333

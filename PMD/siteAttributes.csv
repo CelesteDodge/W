@@ -14,25 +14,25 @@ PMD12,,,,,,,,,,Pepperwood,
 PMD13,,,,,,,,,,Pepperwood,
 PMD14,,,,,,,,,,Pepperwood,
 PMD15,,,,,,,,,,Pepperwood,
-AMD01,,,,,Volcanic,Evergreen,Moderate,,,Annadale,
-AMD02,,,,,Volcanic,Shrubland,High,,,Annadale,
-AMD03,,,,,Volcanic,Evergreen,Moderate,,,Annadale,
-AMD04,,,,,Volcanic,Shrubland,Moderate,,,Annadale,
-AMD05,,,,,Volcanic,Evergreen,High,,,Annadale,
-AMD06,,,,,Volcanic,Broadleaf,Moderate,,,Annadale,
-AMD07,,,,,Volcanic,Herbaceous,Low,,,Annadale,
-AMD08,,,,,Volcanic,Evergreen,High,,,Annadale,
-AMD09,,,,,Volcanic,Evergreen,High,,,Annadale,
-AMD10,,,,,Volcanic,Herbaceous,Low,,,Annadale,
-AMD11,,,,,Volcanic,Evergreen,High,,,Annadale,
-AMD12,,,,,Sedimentary,Shrubland,Low,,,Annadale,
-AMD13,,,,,Sedimentary,Herbaceous,Low,,,Annadale,
-AMD14,,,,,Sedimentary,Shrubland,Moderate,,,Annadale,
-AMD15,,,,,Sedimentary,Herbaceous,Low,,,Annadale,
-AMD16,,,,,Sedimentary,Evergreen,Low,,,Annadale,
-AMD17,,,,,Sedimentary,Evergreen,Low,,,Annadale,
-AMD18,,,,,Sedimentary,Broadleaf,Low,,,Annadale,
-AMD19,,,,,Sedimentary,Broadleaf,Low,,,Annadale,
+AMD01,,,,,Volcanic,Evergreen,Moderate,,,Annadel,
+AMD02,,,,,Volcanic,Shrubland,High,,,Annadel,
+AMD03,,,,,Volcanic,Evergreen,Moderate,,,Annadel,
+AMD04,,,,,Volcanic,Shrubland,Moderate,,,Annadel,
+AMD05,,,,,Volcanic,Evergreen,High,,,Annadel,
+AMD06,,,,,Volcanic,Broadleaf,Moderate,,,Annadel,
+AMD07,,,,,Volcanic,Herbaceous,Low,,,Annadel,
+AMD08,,,,,Volcanic,Evergreen,High,,,Annadel,
+AMD09,,,,,Volcanic,Evergreen,High,,,Annadel,
+AMD10,,,,,Volcanic,Herbaceous,Low,,,Annadel,
+AMD11,,,,,Volcanic,Evergreen,High,,,Annadel,
+AMD12,,,,,Sedimentary,Shrubland,Low,,,Annadel,
+AMD13,,,,,Sedimentary,Herbaceous,Low,,,Annadel,
+AMD14,,,,,Sedimentary,Shrubland,Moderate,,,Annadel,
+AMD15,,,,,Sedimentary,Herbaceous,Low,,,Annadel,
+AMD16,,,,,Sedimentary,Evergreen,Low,,,Annadel,
+AMD17,,,,,Sedimentary,Evergreen,Low,,,Annadel,
+AMD18,,,,,Sedimentary,Broadleaf,Low,,,Annadel,
+AMD19,,,,,Sedimentary,Broadleaf,Low,,,Annadel,
 SMD01,,,,,Serpentinite,Herbaceous,Moderate,,,Sugar Loaf,
 SMD02,,,,,Serpentinite,Shrubland,Moderate,,,Sugar Loaf,
 SMD03,,,,,Franciscan,Herbaceous,Low,,,Sugar Loaf,
@@ -55,16 +55,16 @@ PMDNAT01_2,527210,4268819,3 meters,,,Herbaceous,,,1,Pepperwood,"at GLM, first sa
 PMDNAT01_3,527237,4268803,3 meters,,,Herbaceous,,,1,Pepperwood,"at GLM, first sampled (approx location) in 2015"
 PMDNAT01_4,527239,4268805,3 meters,,,Herbaceous,,,2 (1 in 2015),Pepperwood,"at GLM, first sampled (approx location) in 2015"
 PMDNAT01_5,527245,4268810,3 meters,,,Herbaceous,,,1,Pepperwood,"at GLM, first sampled (approx location) in 2015"
-PMDMIX03_1,,,,,,Herbaceous,,,1 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
-PMDMIX03_2,,,,,,Herbaceous,,,2 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
-PMDMIX03_3,,,,,,Herbaceous,,,2 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
-PMDMIX03_4,,,,,,Herbaceous,,,2 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
-PMDMIX03_5,,,,,,Herbaceous,,,1 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
-PMDMIX05_1,,,,,,Herbaceous,,,2 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
-PMDMIX05_2,,,,,,Herbaceous,,,1 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
-PMDMIX05_3,,,,,,Herbaceous,,,2 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
-PMDMIX05_4,,,,,,Herbaceous,,,2 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
-PMDMIX05_5,,,,,,Herbaceous,,,2 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
+PMDMIX03_1,526384,4270499,3 meters,,,Herbaceous,,,1,Pepperwood,"at GLM, first sampled (approx location) in 2015"
+PMDMIX03_2,526372,4270507,3 meters,,,Herbaceous,,,1 (2 in 2015),Pepperwood,"at GLM, first sampled (approx location) in 2015"
+PMDMIX03_3,526379,4270519,3 meters,,,Herbaceous,,,1 (2 in 2015),Pepperwood,"at GLM, first sampled (approx location) in 2015"
+PMDMIX03_4,526375,4270529,3 meters,,,Herbaceous,,,1 (2 in 2015),Pepperwood,"at GLM, first sampled (approx location) in 2015"
+PMDMIX03_5,526380,4270537,3 meters,,,Herbaceous,,,1,Pepperwood,"at GLM, first sampled (approx location) in 2015"
+PMDMIX05_1,525637,4269656,3 meters,,,Herbaceous,,,2 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
+PMDMIX05_2,525646,4269667,3 meters,,,Herbaceous,,,1 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
+PMDMIX05_3,525656,4269556,3 meters,,,Herbaceous,,,2 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
+PMDMIX05_4,525667,4269665,3 meters,,,Herbaceous,,,2 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
+PMDMIX05_5,525676,4269657,3 meters,,,Herbaceous,,,2 in 2015,Pepperwood,"at GLM, first sampled (approx location) in 2015"
 PMDNAT02_1,525568,4270578,3 meters,,,Herbaceous,,,1 (2 in 2015),Pepperwood,"at GLM, first sampled (approx location) in 2015"
 PMDNAT02_2,525570,4270565,3 meters,,,Herbaceous,,,2 (1 in 2015),Pepperwood,"at GLM, first sampled (approx location) in 2015"
 PMDNAT02_3,525558,4270561,3 meters,,,Herbaceous,,,1,Pepperwood,"at GLM, first sampled (approx location) in 2015"

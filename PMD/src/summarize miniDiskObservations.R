@@ -5,13 +5,16 @@
   #total volume (mL) infiltrated
 #Author: Celeste Dodge
 
-#__Step 1_______Read in the data and look at it
 rm(list=ls())
 
+#__Step 1_______Read in the data, sort by the survey id and examine (sorting ensures table() function works properly)
 setwd("C:/Users/cdodge/Desktop/GIT/W/PMD")
-getwd()
-
 obs <- read.csv("miniDiskObservations.csv")
+
+#reorder obs in ascending order of survey_id
+order.survey_id <- order(obs$survey_id)
+obs <- obs[order.survey_id,]
+
 head(obs)
 
 #__Step 2_______Crunch basic stats about the survey observations
@@ -22,6 +25,7 @@ length(unique(obs$survey_id))
 totals <- data.frame(unique(obs$survey_id))
 totals$countObs <- table(obs$survey_id)
 head(totals)
+
 
 #Get delta Volume and integrate
 #Get cummulative infiltration per survey and merge with number observations
@@ -52,5 +56,6 @@ fullSummary <- merge(minutes, summary, by.x="survey_id", by.y="survey_id")
 head(fullSummary)
 
 #Write the data as a summary file
+setwd("C:/Users/cdodge/Desktop/GIT/W/PMD/summaries")
 write.csv(fullSummary, file = "surveySummaryTable.csv")
 
