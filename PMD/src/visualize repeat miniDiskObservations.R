@@ -10,18 +10,15 @@ rm(list=ls())
 #__Step 1_______Read in the data and look at it
 setwd("C:/Users/cdodge/Desktop/GIT/W/PMD")
 obs <- read.csv("miniDiskObservations.csv")
-head(obs)
 str(obs)
 #change infiltration from factor to numeric
 obs$infiltration <- as.numeric(levels(obs$infiltration)[obs$infiltration])
-surveys <- read.csv("surveys.csv")
-head(surveys)
-
+#load the requisite library for plots
+library("ggplot2")
 
 #__Step 2_______build a ggplot for a site (HAR01)
 plotData <- obs[which(obs$survey_id =='PMDHAR01_01_18-03-07'),]
 plotData2 <- obs[which(obs$survey_id =='HAR01_01_15-11-17'),]
-library("ggplot2")
 ggplot()+
   geom_point(aes(x = plotData$squarerootTime, y = plotData$infiltration),
     color = 'black')+
@@ -113,15 +110,19 @@ ggplot()+
 
 #__Step 3_______build plots for NAT01
 
-#get surveys_id at NAT01_01 (theres only 1 in records QC issue with 2016 data)
+#get surveys_id at NAT01_01
 siteObs <- obs[grep("NAT01_01", obs$survey_id),]
 unique(siteObs$survey_id,)                   
 plot6Data <- obs[which(obs$survey_id =='PMDNAT01_01_18-03-06'),]
-
+plot6Data2 <- obs[which(obs$survey_id =='NAT01_01_15-10-29'),]
 
 ggplot()+
   geom_point(aes(x = plot6Data$squarerootTime, y = plot6Data$infiltration),
              color = 'black')+
+  geom_point(aes(x = plot6Data2$squarerootTime, y = plot6Data2$infiltration),
+             color = 'blue')+
+  geom_line(aes(x = plot6Data2$squarerootTime, y = plot6Data2$infiltration),
+            color = 'blue')+
   ggtitle('NAT01_01')+
   theme(plot.title = element_text(hjust = 0.5))+
   xlab('Square Root of Time (Seconds)')+
@@ -203,22 +204,6 @@ ggplot()+
   geom_line(aes(x = plot10Data2$squarerootTime, y = plot10Data2$infiltration),
             color = 'blue')+
   ggtitle('NAT01_05')+
-  theme(plot.title = element_text(hjust = 0.5))+
-  xlab('Square Root of Time (Seconds)')+
-  ylab('Cummulative Infiltration')
-
-#NAT01_06 ??? What is going on? All 2015 data may have incorrect site attributed to it.
-
-siteObs <- obs[grep("NAT01_06", obs$survey_id),]
-unique(siteObs$survey_id,)                   
-plot11Data2 <- obs[which(obs$survey_id =='NAT01_06_15-10-29'),]
-
-ggplot()+
-  geom_point(aes(x = plot11Data2$squarerootTime, y = plot11Data2$infiltration),
-             color = 'blue')+
-  geom_line(aes(x = plot11Data2$squarerootTime, y = plot11Data2$infiltration),
-            color = 'blue')+
-  ggtitle('NAT01_06??')+
   theme(plot.title = element_text(hjust = 0.5))+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
