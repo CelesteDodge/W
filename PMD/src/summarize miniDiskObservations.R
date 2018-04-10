@@ -1,8 +1,9 @@
-#Date: March 15th 2018
-#Purpose: summarize minidisk observations for PMD project 
+#Date: April 10th 2018
+#Purpose: summarize minidisk surveys for PMD project 
   #observations per survey
   #total minutes of surveys
   #total volume (mL) infiltrated
+  #length of water infiltrated and length over time (preliminary infiltration rate)
 #Author: Celeste Dodge
 
 rm(list=ls())
@@ -51,8 +52,13 @@ surveyLength$minutes <- surveyLength$time/60
 keep <- c("survey_id", "minutes")
 minutes <- surveyLength[keep]
 head(minutes)
-#merge with the other survey sumary data 
+#merge with the other survey sumary data
 fullSummary <- merge(minutes, summary, by.x="survey_id", by.y="survey_id")
+head(fullSummary)
+
+#Create columns similar to C1 factor (a length over time) to summarize infiltration for each survey
+fullSummary$LM_LengthOfWater <- fullSummary$deltaVolume/(pi*2.25^2)
+fullSummary$LM_LengthOverTime_prelimC1 <-fullSummary$LM_LengthOfWater/surveyLength$time
 head(fullSummary)
 
 #Write the data as a summary file

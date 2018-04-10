@@ -5,16 +5,16 @@
 #Author: Celeste Dodge
 
 #Required Libraries: ggplot2
-
-rm(list=ls())
-#__Step 1_______Read in the data and look at it
-setwd("C:/Users/cdodge/Desktop/GIT/W/PMD")
-obs <- read.csv("miniDiskObservations.csv")
-str(obs)
-#change infiltration from factor to numeric
-obs$infiltration <- as.numeric(levels(obs$infiltration)[obs$infiltration])
 #load the requisite library for plots
 library("ggplot2")
+
+rm(list=ls())
+#__Step 1_______Setup
+#Read in the data and look at it with head() and str()
+setwd("C:/Users/cdodge/Desktop/GIT/W/PMD")
+obs <- read.csv("miniDiskObservations.csv")
+#change infiltration from factor to numeric #view issue with str(obs) 
+obs$infiltration <- as.numeric(levels(obs$infiltration)[obs$infiltration])
 
 #__Step 2_______build a ggplot for a site (HAR01)
 plotData <- obs[which(obs$survey_id =='PMDHAR01_01_18-03-07'),]
@@ -204,6 +204,108 @@ ggplot()+
   geom_line(aes(x = plot10Data2$squarerootTime, y = plot10Data2$infiltration),
             color = 'blue')+
   ggtitle('NAT01_05')+
+  theme(plot.title = element_text(hjust = 0.5))+
+  xlab('Square Root of Time (Seconds)')+
+  ylab('Cummulative Infiltration')
+
+
+#__Step 4_______build plots for MIX05 (a transect where suction 2 was used in 2015 and suctions3 in 2018)
+
+#get surveys_id at MIX05_01
+siteObs <- obs[grep("MIX05_01", obs$survey_id),] 
+unique(siteObs$survey_id,)                   
+plot11Data <- obs[which(obs$survey_id =='PMDMIX05_01_18-04-09'),]
+plot11Data2 <- obs[which(obs$survey_id =='MIX05_01_16-04-08'),]
+
+ggplot()+
+  geom_point(aes(x = plot11Data$squarerootTime, y = plot11Data$infiltration),
+             color = 'black')+
+  geom_point(aes(x = plot11Data2$squarerootTime, y = plot11Data2$infiltration),
+             color = 'sky blue')+
+  geom_line(aes(x = plot11Data2$squarerootTime, y = plot11Data2$infiltration),
+            color = 'sky blue')+
+  ggtitle('MIX05_01')+
+  theme(plot.title = element_text(hjust = 0.5))+
+  xlab('Square Root of Time (Seconds)')+
+  ylab('Cummulative Infiltration')
+
+#get surveys_id at MIX05_02
+siteObs <- obs[grep("MIX05_02", obs$survey_id),] 
+unique(siteObs$survey_id,)                   
+plot12Data <- obs[which(obs$survey_id =='PMDMIX05_02_18-04-09'),]
+plot12Data1 <- obs[which(obs$survey_id =='PMDMIX05_02_18-04-09-2'),]
+plot12Data2 <- obs[which(obs$survey_id =='MIX05_02_16-04-08'),]
+
+ggplot()+
+  geom_point(aes(x = plot12Data$squarerootTime, y = plot12Data$infiltration),
+             color = 'black')+
+  geom_point(aes(x = plot12Data1$squarerootTime, y = plot12Data1$infiltration),
+             color = 'red')+
+  geom_point(aes(x = plot12Data2$squarerootTime, y = plot12Data2$infiltration),
+             color = 'blue')+
+  geom_line(aes(x = plot12Data2$squarerootTime, y = plot12Data2$infiltration),
+            color = 'blue')+
+  ggtitle('MIX05_02')+
+  theme(plot.title = element_text(hjust = 0.5))+
+  xlab('Square Root of Time (Seconds)')+
+  ylab('Cummulative Infiltration')
+
+#get surveys_id at MIX05_03
+siteObs <- obs[grep("MIX05_03", obs$survey_id),] 
+unique(siteObs$survey_id,)                   
+plot13Data <- obs[which(obs$survey_id =='PMDMIX05_03_18-04-09'),]
+plot13Data2 <- obs[which(obs$survey_id =='MIX05_03_16-04-08'),]
+
+ggplot()+
+  geom_point(aes(x = plot13Data$squarerootTime, y = plot13Data$infiltration),
+             color = 'black')+
+  geom_point(aes(x = plot13Data2$squarerootTime, y = plot13Data2$infiltration),
+             color = 'sky blue')+
+  geom_line(aes(x = plot13Data2$squarerootTime, y = plot13Data2$infiltration),
+            color = 'sky blue')+
+  ggtitle('MIX05_03')+
+  theme(plot.title = element_text(hjust = 0.5))+
+  xlab('Square Root of Time (Seconds)')+
+  ylab('Cummulative Infiltration')
+
+#get surveys_id at MIX05_04
+siteObs <- obs[grep("MIX05_04", obs$survey_id),] 
+unique(siteObs$survey_id,)                   
+plot14Data <- obs[which(obs$survey_id =='PMDMIX05_04_18-04-09'),]
+plot14Data1 <- obs[which(obs$survey_id =='PMDMIX05_04_18-04-09-2'),]
+plot14Data3 <- obs[which(obs$survey_id =='PMDMIX05_04_18-04-09-3'),]
+plot14Data2 <- obs[which(obs$survey_id =='MIX05_04_16-04-08'),]
+
+ggplot()+
+  geom_point(aes(x = plot14Data$squarerootTime, y = plot14Data$infiltration),
+             color = 'black')+
+  geom_point(aes(x = plot14Data1$squarerootTime, y = plot14Data1$infiltration),
+             color = 'red')+
+  geom_point(aes(x = plot14Data3$squarerootTime, y = plot14Data3$infiltration),
+             color = 'orange')+
+  geom_point(aes(x = plot14Data2$squarerootTime, y = plot14Data2$infiltration),
+             color = 'sky blue')+
+  geom_line(aes(x = plot14Data2$squarerootTime, y = plot14Data2$infiltration),
+            color = 'sky blue')+
+  ggtitle('MIX05_04')+
+  theme(plot.title = element_text(hjust = 0.5))+
+  xlab('Square Root of Time (Seconds)')+
+  ylab('Cummulative Infiltration')
+
+#get surveys_id at MIX05_05
+siteObs <- obs[grep("MIX05_05", obs$survey_id),] 
+unique(siteObs$survey_id,)                   
+plot15Data <- obs[which(obs$survey_id =='PMDMIX05_05_18-04-09'),]
+plot15Data2 <- obs[which(obs$survey_id =='MIX05_05_16-04-08'),]
+
+ggplot()+
+  geom_point(aes(x = plot15Data$squarerootTime, y = plot15Data$infiltration),
+             color = 'black')+
+  geom_point(aes(x = plot15Data2$squarerootTime, y = plot15Data2$infiltration),
+             color = 'sky blue')+
+  geom_line(aes(x = plot15Data2$squarerootTime, y = plot15Data2$infiltration),
+            color = 'sky blue')+
+  ggtitle('MIX05_05')+
   theme(plot.title = element_text(hjust = 0.5))+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
