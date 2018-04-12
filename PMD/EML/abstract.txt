@@ -4,10 +4,11 @@ Pre-fire mini disk observations were collected at Pepperwood between October of 
 between the disk and ground surface to improve contact. We reoccupied sites with baseline data in 2018, at point locations estimated to be within 
 1 meter of the original unmarked locations established in 2015-2016. Starting in February of 2018, we marked sites with flagging and four nails 
 arranged  in a 5 inch square, at the center of which we placed mini disk infiltrometers.We observed infiltration volume every 30 seconds to one 
-minute, making a minimum of 30 observations and allowing a minimum of 10mL of water to infiltrate the soil. 
+minute, making a minimum of 30 observations and allowing a minimum of 10mL of water to infiltrate the soil. The USGS established additional grassland
+and forest sites for this project beginning after the fire in 2017.
 
 We measured infiltration at each site once during the 7-month pre-fire period and the number of observations ranged from 6 up to 12 at each point, or between 
 28 and 60 observations per transect. In 2015 – 2016 soil carbon and soil bulk density were taken at all grassland transect sites, following methodologies 
 based upon the soil sampling methods described in the Point Blue Rangeland Monitoring Network Handbook of Field Methods. We collected soil samples for 
 grain-size analysis within USGS labs in 2018. This project is being run in conjunctions with a collaborative project between the USGS and the Sonoma County 
-Water Agency, but this dataset currently contains observations collected only at Pepperwood by Pepperwood staff and volunteers.
+Water Agency and this dataset contains some observations collected by the USGS at Pepperwood and all observations collected by Pepperwood staff and volu nteers.
