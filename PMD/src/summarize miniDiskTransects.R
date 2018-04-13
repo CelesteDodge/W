@@ -6,6 +6,9 @@
   #length of water infiltrated and length over time (preliminary infiltration rate)
 #Author: Celeste Dodge
 
+#******
+#REQUIREMENTS: run "summarize miniDiskObservation.R" to updated values on new surveys before running this
+
 rm(list=ls())
 
 #__Step 1_______Read in the survey summary data, 
@@ -23,7 +26,7 @@ TransectSummaryTable <- data.frame(survey_date=as.Date(character()),
 
 
 
-#__Step 2_______Calculate mean and variation of preliminary infiltration rate at MIX05 transect
+#__Step 2_______Calculate mean and SD of preliminary infiltration rate at MIX05 transect
 #get survey_id and view unique surveys at selected site
 transectSurveys <- surveys[grep("MIX05", surveys$survey_id),] 
 unique(transectSurveys$survey_id,)  

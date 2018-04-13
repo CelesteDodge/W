@@ -56,12 +56,13 @@ head(minutes)
 fullSummary <- merge(minutes, summary, by.x="survey_id", by.y="survey_id")
 head(fullSummary)
 
-#Create columns similar to C1 factor (a length over time) to summarize infiltration for each survey
+#Create columns similar to C1 factor (a length over time) to summarize infiltration 
+#For each survey mL inviltrated/cm^2 units = cm final units will be cm/minute
 fullSummary$LM_LengthOfWater <- fullSummary$deltaVolume/(pi*2.25^2)
-fullSummary$LM_LengthOverTime_prelimC1 <-fullSummary$LM_LengthOfWater/surveyLength$time
+fullSummary$LM_LengthOverTime_prelimC1 <-fullSummary$LM_LengthOfWater/surveyLength$minutes
 head(fullSummary)
 
 #Write the data as a summary file
 setwd("C:/Users/cdodge/Desktop/GIT/W/PMD/summaries")
-write.csv(fullSummary, file = "surveySummaryTable14-11-18.csv")
+write.csv(fullSummary, file = "surveySummaryTable.csv")
 

@@ -33,56 +33,64 @@ colnames(results)[19] <-"C1"
 jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/rplot_boxplot_HAR01.jpg') 
 HAR01 <- results[results$grasslandTransect == "HAR01",]
 boxplot(C1~Date,data=HAR01, main="HAR01: Preliminary Infiltration *suction not accounted for*", 
-        xlab="Survey Date", ylab="Average Length of Water Divided by Time")
+        xlab="Survey Date", ylab="Average cm of Water Divided by Minutes",
+        ylim = c(0, 1.2))
 dev.off()
 
 #MED01        
 jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/rplot_boxplot_MED01.jpg') 
 MED01 <- results[results$grasslandTransect == "MED01",]
 boxplot(C1~Date,data=MED01, main="MIX01: Preliminary Infiltration *suction not accounted for*", 
-        xlab="Survey Date", ylab="Average Length of Water Divided by Time")
+        xlab="Survey Date", ylab="Average cm of Water Divided by Minutes",
+        ylim = c(0, 1.2))
 dev.off()
 
 #MED02        
 jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/rplot_boxplot_MED02.jpg') 
 MED02 <- results[results$grasslandTransect == "MED02",]
 boxplot(C1~Date,data=MED02, main="MIX01: Preliminary Infiltration *suction not accounted for*", 
-        xlab="Survey Date", ylab="Average Length of Water Divided by Time")
+        xlab="Survey Date", ylab="Average cm of Water Divided by Minutes",
+        ylim = c(0, 1.2))
 dev.off()
 
 #MIX01        
 jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/rplot_boxplot_MIX01.jpg') 
 MIX01 <- results[results$grasslandTransect == "MIX01",]
 boxplot(C1~Date,data=MIX01, main="MIX01: Preliminary Infiltration *suction not accounted for*", 
-        xlab="Survey Date", ylab="Average Length of Water Divided by Time")
+        xlab="Survey Date", ylab="Average cm of Water Divided by Minutes",
+        ylim = c(0, 1.2))
 dev.off()
 
 #MIX03
 jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/rplot_boxplot_MIX03.jpg') 
 MIX03 <- results[results$grasslandTransect == "MIX03",]
 boxplot(C1~Date,data=MIX03, main="MIX03: Preliminary Infiltration *suction not accounted for*", 
-        xlab="Survey Date", ylab="Average Length of Water Divided by Time")
+        xlab="Survey Date", ylab="Average cm of Water Divided by Minutes",
+        ylim = c(0, 1.2))
 dev.off()
 
 #MIX05
 jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/rplot_boxplot_MIX05.jpg') 
 MIX05 <- results[results$grasslandTransect == "MIX05",]
 boxplot(C1~Date,data=MIX05, main="MIX05: Preliminary Infiltration *suction not accounted for*", 
-        xlab="Survey Date", ylab="Average Length of Water Divided by Time")
+        xlab="Survey Date", ylab="Average cm of Water Divided by Minutes",
+        ylim = c(0, 1.2))
 dev.off()
 
 #NAT01
 jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/rplot_boxplot_NAT01.jpg') 
 NAT01 <- results[results$grasslandTransect == "NAT01",]
 boxplot(C1~Date,data=NAT01, main="NAT01: Preliminary Infiltration *suction not accounted for*", 
-        xlab="Survey Date", ylab="Average Length of Water Divided by Time")
+        xlab="Survey Date", ylab="Average cm of Water Divided by Minutes",
+        ylim = c(0, 1.2))
 dev.off()
 
 #NAT02
 jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/rplot_boxplot_NAT02.jpg') 
 NAT02 <- results[results$grasslandTransect == "NAT02",]
 boxplot(C1~Date,data=NAT02, main="NAT02: Preliminary Infiltration *suction not accounted for*", 
-        xlab="Survey Date", ylab="Average Length of Water Divided by Time")
+        xlab="Survey Date", ylab="Average cm of Water Divided by Minutes",
+        ylim = c(0, 1.2))
 dev.off()
 
 #**********************
