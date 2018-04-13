@@ -21,6 +21,8 @@ TransectSummaryTable <- data.frame(survey_date=as.Date(character()),
                                    transect_id=character()
                                     ) 
 
+
+
 #__Step 2_______Calculate mean and variation of preliminary infiltration rate at MIX05 transect
 #get survey_id and view unique surveys at selected site
 transectSurveys <- surveys[grep("MIX05", surveys$survey_id),] 
@@ -261,20 +263,12 @@ head(transectAverage)
 #add these rows to the summary table
 TransectSummaryTable <- rbind(TransectSummaryTable, transectAverage)
 
-#____Step 10______Reorder columns by column index so transect ID is at front then save your work
+#____Step 10______Format and save transect summary results
+#Reorder columns by column index so transect ID is at front then save your work
 TransectSummaryTable <- TransectSummaryTable[c(4,1,2,3)]
 head(TransectSummaryTable)
 #Write the data as a summary file
 write.csv(TransectSummaryTable, file = "transectSummaryTable.csv")
 
-#____Step 11______Plot the results of this table
-unique(surveys)
-surveys$transect <-
-HAR01 <- surveys[grep("HAR01", surveys$survey_id),]
-MIX01 <- surveys[grep("MIX01", surveys$survey_id),]
-MIX03 <- surveys[grep("MIX03", surveys$survey_id),] 
-MIX05 <- surveys[grep("MIX05", surveys$survey_id),] 
-NAT01 <- surveys[grep("NAT01", surveys$survey_id),] 
-NAT02 <- surveys[grep("NAT02", surveys$survey_id),] 
-MED01 <- surveys[grep("MED01", surveys$survey_id),] 
-MED02 <- surveys[grep("MED02", surveys$survey_id),] 
+
+ 
