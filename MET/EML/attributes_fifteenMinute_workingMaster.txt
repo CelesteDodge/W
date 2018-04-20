@@ -1,0 +1,24 @@
+attributeName	attributeDefinition	class	unit	dateTimeFormatString	missingValueCode	missingValueCodeExplanation
+timeStamp		Date		!Add datetime specifier here!		
+recNum		numeric	!Add units here!			
+windSpeed		numeric	!Add units here!			
+windDir		numeric	!Add units here!			
+windMax		numeric	!Add units here!			
+windSpeed2d		character				
+windDir2d		character				
+windMax2d		numeric	!Add units here!			
+solarRad		numeric	!Add units here!			
+solarTot		numeric	!Add units here!			
+airTemp		numeric	!Add units here!			
+RH		numeric	!Add units here!			
+rainHun15min		numeric	!Add units here!			
+leafWetness		numeric	!Add units here!			
+barometricPressure		numeric	!Add units here!			
+rainInchYear		numeric	!Add units here!			
+rainInch15min		numeric	!Add units here!			
+rainInch15min_Formula		numeric	!Add units here!			
+rainInch15minDavis		numeric	!Add units here!			
+rainInchYearDavis		numeric	!Add units here!			
+flagQC		categorical				
+flagQC2		categorical				
+flagQC3		categorical				

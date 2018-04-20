@@ -1,0 +1,8 @@
+﻿This weather station network includes two Cambpbell Scientific datalogger nodes with above and below ground sensors. The
+primary station is situated in grasslands and equiped with standard above ground weather station equipment designed to record
+wind, rain, temperature, humidity, solar radiation and leaf wetness. Below ground this primary station is equipped soil moisture
+sensors of two types at four depths. Soil moisture is measured in terms of both volumetric water content of the soil and soil
+water potential. A second nearby station is situated in an oak woodland habitat and is equiped with an identical set of soil
+moisture sensors as well as a leaf wetness sensor above ground. Objectives include providing calibration capabilites for models
+of soil moisture and drought stress, providing data for US Geologic Survey data releases and documenting a baseline of abiotic
+conditions at Pepperwood's Sentinel Site for use in ecological research.

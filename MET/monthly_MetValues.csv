@@ -1,0 +1,393 @@
+site_id,Year,Month,sensor_id,sensor_type,aggregation_stat,sensor_observation,QC_Comments
+BHWS,2010,Oct,BHWS_TE525,rain,total monthly inches,5.41,NA
+BHWS,2010,Nov,BHWS_TE525,rain,total monthly inches,3.26,NA
+BHWS,2010,Dec,BHWS_TE525,rain,total monthly inches,9.45,NA
+BHWS,2011,Jan,BHWS_TE525,rain,total monthly inches,2.01,NA
+BHWS,2011,Feb,BHWS_TE525,rain,total monthly inches,6.65,NA
+BHWS,2011,Mar,BHWS_TE525,rain,total monthly inches,10.96,NA
+BHWS,2011,Apr,BHWS_TE525,rain,total monthly inches,0.71,NA
+BHWS,2011,May,BHWS_TE525,rain,total monthly inches,2.64,NA
+BHWS,2011,Jun,BHWS_TE525,rain,total monthly inches,2.12,NA
+BHWS,2011,Jul,BHWS_TE525,rain,total monthly inches,0,NA
+BHWS,2011,Aug,BHWS_TE525,rain,total monthly inches,0.02,NA
+BHWS,2011,Sep,BHWS_TE525,rain,total monthly inches,0.02,NA
+BHWS,2011,Oct,BHWS_TE525,rain,total monthly inches,2.48,NA
+BHWS,2011,Nov,BHWS_TE525,rain,total monthly inches,2.2,NA
+BHWS,2011,Dec,BHWS_TE525,rain,total monthly inches,0.28,NA
+BHWS,2012,Jan,BHWS_TE525,rain,total monthly inches,6.28,NA
+BHWS,2012,Feb,BHWS_TE525,rain,total monthly inches,2.33,NA
+BHWS,2012,Mar,BHWS_TE525,rain,total monthly inches,9.98,NA
+BHWS,2012,Apr,BHWS_TE525,rain,total monthly inches,2.56,NA
+BHWS,2012,May,BHWS_TE525,rain,total monthly inches,0.26,NA
+BHWS,2012,Jun,BHWS_TE525,rain,total monthly inches,0.05,NA
+BHWS,2012,Jul,BHWS_TE525,rain,total monthly inches,0.02,NA
+BHWS,2012,Aug,BHWS_TE525,rain,total monthly inches,0,NA
+BHWS,2012,Sep,BHWS_TE525,rain,total monthly inches,0.01,NA
+BHWS,2012,Oct,BHWS_TE525,rain,total monthly inches,2.29,NA
+BHWS,2012,Nov,BHWS_TE525,rain,total monthly inches,8.33,NA
+BHWS,2012,Dec,BHWS_TE525,rain,total monthly inches,10.05,NA
+BHWS,2013,Jan,BHWS_TE525,rain,total monthly inches,0.89,NA
+BHWS,2013,Feb,BHWS_TE525,rain,total monthly inches,0.33,NA
+BHWS,2013,Mar,BHWS_TE525,rain,total monthly inches,2.14,NA
+BHWS,2013,Apr,BHWS_TE525,rain,total monthly inches,0.98,NA
+BHWS,2013,May,BHWS_TE525,rain,total monthly inches,0.21,NA
+BHWS,2013,Jun,BHWS_TE525,rain,total monthly inches,1.24,NA
+BHWS,2013,Jul,BHWS_TE525,rain,total monthly inches,0.03,NA
+BHWS,2013,Aug,BHWS_TE525,rain,total monthly inches,0.03,NA
+BHWS,2013,Sep,BHWS_TE525,rain,total monthly inches,0.68,NA
+BHWS,2013,Oct,BHWS_TE525,rain,total monthly inches,0,NA
+BHWS,2013,Nov,BHWS_TE525,rain,total monthly inches,0,NA
+BHWS,2013,Dec,BHWS_TE525,rain,total monthly inches,0.45,NA
+BHWS,2014,Jan,BHWS_TE525,rain,total monthly inches,0.1,NA
+BHWS,2014,Feb,BHWS_TE525,rain,total monthly inches,10.91,NA
+BHWS,2014,Mar,BHWS_TE525,rain,total monthly inches,3.97,NA
+BHWS,2014,Apr,BHWS_TE525,rain,total monthly inches,1.27,NA
+BHWS,2014,May,BHWS_TE525,rain,total monthly inches,0.04,NA
+BHWS,2014,Jun,BHWS_TE525,rain,total monthly inches,0,NA
+BHWS,2014,Jul,BHWS_TE525,rain,total monthly inches,0.02,NA
+BHWS,2014,Aug,BHWS_TE525,rain,total monthly inches,0.02,NA
+BHWS,2014,Sep,BHWS_TE525,rain,total monthly inches,0.6,NA
+BHWS,2014,Oct,BHWS_TE525,rain,total monthly inches,1.42,NA
+BHWS,2014,Nov,BHWS_TE525,rain,total monthly inches,3.3,NA
+BHWS,2014,Dec,BHWS_TE525,rain,total monthly inches,13.74,NA
+BHWS,2015,Jan,BHWS_TE525,rain,total monthly inches,0.16,NA
+BHWS,2015,Feb,BHWS_TE525,rain,total monthly inches,3.79,NA
+BHWS,2015,Mar,BHWS_TE525,rain,total monthly inches,0.12,NA
+BHWS,2015,Apr,BHWS_TE525,rain,total monthly inches,1.69,NA
+BHWS,2015,May,BHWS_TE525,rain,total monthly inches,0.03,NA
+BHWS,2015,Jun,BHWS_TE525,rain,total monthly inches,0.03,NA
+BHWS,2015,Jul,BHWS_TE525,rain,total monthly inches,0.07,NA
+BHWS,2015,Aug,BHWS_TE525,rain,total monthly inches,0,NA
+BHWS,2015,Sep,BHWS_TE525,rain,total monthly inches,0,NA
+BHWS,2015,Oct,BHWS_TE525,rain,total monthly inches,0.07,NA
+BHWS,2015,Nov,BHWS_TE525,rain,total monthly inches,1.51,NA
+BHWS,2015,Dec,BHWS_TE525,rain,total monthly inches,6.41,NA
+BHWS,2016,Jan,BHWS_TE525,rain,total monthly inches,9.39,NA
+BHWS,2016,Feb,BHWS_TE525,rain,total monthly inches,1.58,NA
+BHWS,2016,Mar,BHWS_TE525,rain,total monthly inches,9.79,NA
+BHWS,2016,Apr,BHWS_TE525,rain,total monthly inches,1.54,NA
+BHWS,2016,May,BHWS_TE525,rain,total monthly inches,0.94,NA
+BHWS,2016,Jun,BHWS_TE525,rain,total monthly inches,0.11,NA
+BHWS,2016,Jul,BHWS_TE525,rain,total monthly inches,0,NA
+BHWS,2016,Aug,BHWS_TE525,rain,total monthly inches,0.03,NA
+BHWS,2016,Sep,BHWS_TE525,rain,total monthly inches,0.01,NA
+BHWS,2016,Oct,BHWS_TE525,rain,total monthly inches,7.35,NA
+BHWS,2016,Nov,BHWS_TE525,rain,total monthly inches,3.3,NA
+BHWS,2016,Dec,BHWS_TE525,rain,total monthly inches,5.52,NA
+BHWS,2017,Jan,BHWS_TE525,rain,total monthly inches,15.33,NA
+BHWS,2017,Feb,BHWS_TE525,rain,total monthly inches,11.78,NA
+BHWS,2017,Mar,BHWS_TE525,rain,total monthly inches,3.18,NA
+BHWS,2017,Apr,BHWS_TE525,rain,total monthly inches,4.34,NA
+BHWS,2017,May,BHWS_TE525,rain,total monthly inches,0.03,NA
+BHWS,2017,Jun,BHWS_TE525,rain,total monthly inches,0.22,NA
+BHWS,2017,Jul,BHWS_TE525,rain,total monthly inches,0,NA
+BHWS,2017,Aug,BHWS_TE525,rain,total monthly inches,0,NA
+BHWS,2017,Sep,BHWS_TE525,rain,total monthly inches,0.1,NA
+BHWS,2017,Oct,BHWS_TE525,rain,total monthly inches,0.41,Rain sensor malfunction fire damage Oct 2017 (value is 80.7% of 0.51 Garrrison Canyon total for month)
+BHWS,2017,Nov,BHWS_TE525,rain,total monthly inches,5.84,Rain sensor malfunction fire damage Oct 2017 (value is 80.7% of 5.96 Garrrison Canyon total for 11/1 to11/24 plus the 1.03 recorded by DC station between 11/25 to 11/27
+BHWS,2017,Dec,BHWS_TE525,rain,total monthly inches,1.09,Rain sensor malfunction fire damage Oct 2017 (value is 80.7% of Garrison Canyon total for 12/1 to 12/30 plus 0 inches recorded at DC on 12/31)
+BHWS,2018,Jan,BHWS_TE525,rain,total monthly inches,4.79,NA
+BHWS,2010,Oct,BHWS_TE525,rain,total inches since October 1,5.41,NA
+BHWS,2010,Nov,BHWS_TE525,rain,total inches since October 1,8.67,NA
+BHWS,2010,Dec,BHWS_TE525,rain,total inches since October 1,18.12,NA
+BHWS,2011,Jan,BHWS_TE525,rain,total inches since October 1,20.13,NA
+BHWS,2011,Feb,BHWS_TE525,rain,total inches since October 1,26.78,NA
+BHWS,2011,Mar,BHWS_TE525,rain,total inches since October 1,37.74,NA
+BHWS,2011,Apr,BHWS_TE525,rain,total inches since October 1,38.45,NA
+BHWS,2011,May,BHWS_TE525,rain,total inches since October 1,41.09,NA
+BHWS,2011,Jun,BHWS_TE525,rain,total inches since October 1,43.21,NA
+BHWS,2011,Jul,BHWS_TE525,rain,total inches since October 1,43.21,NA
+BHWS,2011,Aug,BHWS_TE525,rain,total inches since October 1,43.23,NA
+BHWS,2011,Sep,BHWS_TE525,rain,total inches since October 1,43.25,NA
+BHWS,2011,Oct,BHWS_TE525,rain,total inches since October 1,2.48,NA
+BHWS,2011,Nov,BHWS_TE525,rain,total inches since October 1,4.68,NA
+BHWS,2011,Dec,BHWS_TE525,rain,total inches since October 1,4.96,NA
+BHWS,2012,Jan,BHWS_TE525,rain,total inches since October 1,11.24,NA
+BHWS,2012,Feb,BHWS_TE525,rain,total inches since October 1,13.57,NA
+BHWS,2012,Mar,BHWS_TE525,rain,total inches since October 1,23.55,NA
+BHWS,2012,Apr,BHWS_TE525,rain,total inches since October 1,26.11,NA
+BHWS,2012,May,BHWS_TE525,rain,total inches since October 1,26.37,NA
+BHWS,2012,Jun,BHWS_TE525,rain,total inches since October 1,26.42,NA
+BHWS,2012,Jul,BHWS_TE525,rain,total inches since October 1,26.44,NA
+BHWS,2012,Aug,BHWS_TE525,rain,total inches since October 1,26.44,NA
+BHWS,2012,Sep,BHWS_TE525,rain,total inches since October 1,26.45,NA
+BHWS,2012,Oct,BHWS_TE525,rain,total inches since October 1,2.29,NA
+BHWS,2012,Nov,BHWS_TE525,rain,total inches since October 1,10.62,NA
+BHWS,2012,Dec,BHWS_TE525,rain,total inches since October 1,20.67,NA
+BHWS,2013,Jan,BHWS_TE525,rain,total inches since October 1,21.56,NA
+BHWS,2013,Feb,BHWS_TE525,rain,total inches since October 1,21.89,NA
+BHWS,2013,Mar,BHWS_TE525,rain,total inches since October 1,24.03,NA
+BHWS,2013,Apr,BHWS_TE525,rain,total inches since October 1,25.01,NA
+BHWS,2013,May,BHWS_TE525,rain,total inches since October 1,25.22,NA
+BHWS,2013,Jun,BHWS_TE525,rain,total inches since October 1,26.46,NA
+BHWS,2013,Jul,BHWS_TE525,rain,total inches since October 1,26.49,NA
+BHWS,2013,Aug,BHWS_TE525,rain,total inches since October 1,26.52,NA
+BHWS,2013,Sep,BHWS_TE525,rain,total inches since October 1,27.2,NA
+BHWS,2013,Oct,BHWS_TE525,rain,total inches since October 1,0,NA
+BHWS,2013,Nov,BHWS_TE525,rain,total inches since October 1,0,NA
+BHWS,2013,Dec,BHWS_TE525,rain,total inches since October 1,0.45,NA
+BHWS,2014,Jan,BHWS_TE525,rain,total inches since October 1,0.55,NA
+BHWS,2014,Feb,BHWS_TE525,rain,total inches since October 1,11.46,NA
+BHWS,2014,Mar,BHWS_TE525,rain,total inches since October 1,15.43,NA
+BHWS,2014,Apr,BHWS_TE525,rain,total inches since October 1,16.7,NA
+BHWS,2014,May,BHWS_TE525,rain,total inches since October 1,16.74,NA
+BHWS,2014,Jun,BHWS_TE525,rain,total inches since October 1,16.74,NA
+BHWS,2014,Jul,BHWS_TE525,rain,total inches since October 1,16.76,NA
+BHWS,2014,Aug,BHWS_TE525,rain,total inches since October 1,16.78,NA
+BHWS,2014,Sep,BHWS_TE525,rain,total inches since October 1,17.38,NA
+BHWS,2014,Oct,BHWS_TE525,rain,total inches since October 1,1.42,NA
+BHWS,2014,Nov,BHWS_TE525,rain,total inches since October 1,4.72,NA
+BHWS,2014,Dec,BHWS_TE525,rain,total inches since October 1,18.46,NA
+BHWS,2015,Jan,BHWS_TE525,rain,total inches since October 1,18.62,NA
+BHWS,2015,Feb,BHWS_TE525,rain,total inches since October 1,22.41,NA
+BHWS,2015,Mar,BHWS_TE525,rain,total inches since October 1,22.53,NA
+BHWS,2015,Apr,BHWS_TE525,rain,total inches since October 1,24.22,NA
+BHWS,2015,May,BHWS_TE525,rain,total inches since October 1,24.25,NA
+BHWS,2015,Jun,BHWS_TE525,rain,total inches since October 1,24.28,NA
+BHWS,2015,Jul,BHWS_TE525,rain,total inches since October 1,24.35,NA
+BHWS,2015,Aug,BHWS_TE525,rain,total inches since October 1,24.35,NA
+BHWS,2015,Sep,BHWS_TE525,rain,total inches since October 1,24.35,NA
+BHWS,2015,Oct,BHWS_TE525,rain,total inches since October 1,0.07,NA
+BHWS,2015,Nov,BHWS_TE525,rain,total inches since October 1,1.58,NA
+BHWS,2015,Dec,BHWS_TE525,rain,total inches since October 1,7.99,NA
+BHWS,2016,Jan,BHWS_TE525,rain,total inches since October 1,17.38,NA
+BHWS,2016,Feb,BHWS_TE525,rain,total inches since October 1,18.96,NA
+BHWS,2016,Mar,BHWS_TE525,rain,total inches since October 1,28.75,NA
+BHWS,2016,Apr,BHWS_TE525,rain,total inches since October 1,30.29,NA
+BHWS,2016,May,BHWS_TE525,rain,total inches since October 1,31.23,NA
+BHWS,2016,Jun,BHWS_TE525,rain,total inches since October 1,31.34,NA
+BHWS,2016,Jul,BHWS_TE525,rain,total inches since October 1,31.34,NA
+BHWS,2016,Aug,BHWS_TE525,rain,total inches since October 1,31.37,NA
+BHWS,2016,Sep,BHWS_TE525,rain,total inches since October 1,31.38,NA
+BHWS,2016,Oct,BHWS_TE525,rain,total inches since October 1,7.35,NA
+BHWS,2016,Nov,BHWS_TE525,rain,total inches since October 1,10.65,NA
+BHWS,2016,Dec,BHWS_TE525,rain,total inches since October 1,16.17,NA
+BHWS,2017,Jan,BHWS_TE525,rain,total inches since October 1,31.5,NA
+BHWS,2017,Feb,BHWS_TE525,rain,total inches since October 1,43.28,NA
+BHWS,2017,Mar,BHWS_TE525,rain,total inches since October 1,46.46,NA
+BHWS,2017,Apr,BHWS_TE525,rain,total inches since October 1,50.8,NA
+BHWS,2017,May,BHWS_TE525,rain,total inches since October 1,50.83,NA
+BHWS,2017,Jun,BHWS_TE525,rain,total inches since October 1,51.05,NA
+BHWS,2017,Jul,BHWS_TE525,rain,total inches since October 1,51.05,NA
+BHWS,2017,Aug,BHWS_TE525,rain,total inches since October 1,51.05,NA
+BHWS,2017,Sep,BHWS_TE525,rain,total inches since October 1,51.15,NA
+BHWS,2017,Oct,BHWS_TE525,rain,total inches since October 1,0.41,Rain sensor malfunction fire damage Oct 2017 (value is 80.7% of 0.51 Garrrison Canyon total for month)
+BHWS,2017,Nov,BHWS_TE525,rain,total inches since October 1,6.25,Rain sensor malfunction fire damage Oct 2017 (value is 80.7% of 5.96 Garrrison Canyon total for 11/1 to11/24 plus the 1.03 recorded by DC station between 11/25 to 11/27
+BHWS,2017,Dec,BHWS_TE525,rain,total inches since October 1,7.34,Rain sensor malfunction fire damage Oct 2017 (value is 80.7% of Garrison Canyon total for 12/1 to 12/30 plus 0 inches recorded at DC on 12/31)
+BHWS,2018,Jan,BHWS_TE525,rain,total inches since October 1,12.13,NA
+BHWS,2010,Oct,BHWS_HMP45c,airTemp,monthly minimum,6.317,NA
+BHWS,2010,Nov,BHWS_HMP45c,airTemp,monthly minimum,-0.206,NA
+BHWS,2010,Dec,BHWS_HMP45c,airTemp,monthly minimum,0.582,NA
+BHWS,2011,Jan,BHWS_HMP45c,airTemp,monthly minimum,-1.898,NA
+BHWS,2011,Feb,BHWS_HMP45c,airTemp,monthly minimum,-2.29,NA
+BHWS,2011,Mar,BHWS_HMP45c,airTemp,monthly minimum,2.966,NA
+BHWS,2011,Apr,BHWS_HMP45c,airTemp,monthly minimum,1.581,NA
+BHWS,2011,May,BHWS_HMP45c,airTemp,monthly minimum,4.078,NA
+BHWS,2011,Jun,BHWS_HMP45c,airTemp,monthly minimum,6.402,NA
+BHWS,2011,Jul,BHWS_HMP45c,airTemp,monthly minimum,8.09,NA
+BHWS,2011,Aug,BHWS_HMP45c,airTemp,monthly minimum,7.302,NA
+BHWS,2011,Sep,BHWS_HMP45c,airTemp,monthly minimum,8.14,NA
+BHWS,2011,Oct,BHWS_HMP45c,airTemp,monthly minimum,8.24,NA
+BHWS,2011,Nov,BHWS_HMP45c,airTemp,monthly minimum,1.913,NA
+BHWS,2011,Dec,BHWS_HMP45c,airTemp,monthly minimum,2.963,NA
+BHWS,2012,Jan,BHWS_HMP45c,airTemp,monthly minimum,-1.149,NA
+BHWS,2012,Feb,BHWS_HMP45c,airTemp,monthly minimum,0.33,NA
+BHWS,2012,Mar,BHWS_HMP45c,airTemp,monthly minimum,1.112,NA
+BHWS,2012,Apr,BHWS_HMP45c,airTemp,monthly minimum,1.31,NA
+BHWS,2012,May,BHWS_HMP45c,airTemp,monthly minimum,4.857,NA
+BHWS,2012,Jun,BHWS_HMP45c,airTemp,monthly minimum,6.615,NA
+BHWS,2012,Jul,BHWS_HMP45c,airTemp,monthly minimum,8.35,NA
+BHWS,2012,Aug,BHWS_HMP45c,airTemp,monthly minimum,7.514,NA
+BHWS,2012,Sep,BHWS_HMP45c,airTemp,monthly minimum,6.161,NA
+BHWS,2012,Oct,BHWS_HMP45c,airTemp,monthly minimum,6.09,NA
+BHWS,2012,Nov,BHWS_HMP45c,airTemp,monthly minimum,2.241,NA
+BHWS,2012,Dec,BHWS_HMP45c,airTemp,monthly minimum,-0.051,NA
+BHWS,2013,Jan,BHWS_HMP45c,airTemp,monthly minimum,0.083,NA
+BHWS,2013,Feb,BHWS_HMP45c,airTemp,monthly minimum,0.813,NA
+BHWS,2013,Mar,BHWS_HMP45c,airTemp,monthly minimum,2.778,NA
+BHWS,2013,Apr,BHWS_HMP45c,airTemp,monthly minimum,3.193,NA
+BHWS,2013,May,BHWS_HMP45c,airTemp,monthly minimum,4.768,NA
+BHWS,2013,Jun,BHWS_HMP45c,airTemp,monthly minimum,7.86,NA
+BHWS,2013,Jul,BHWS_HMP45c,airTemp,monthly minimum,7.546,NA
+BHWS,2013,Aug,BHWS_HMP45c,airTemp,monthly minimum,8.46,NA
+BHWS,2013,Sep,BHWS_HMP45c,airTemp,monthly minimum,8.26,NA
+BHWS,2013,Oct,BHWS_HMP45c,airTemp,monthly minimum,5.735,NA
+BHWS,2013,Nov,BHWS_HMP45c,airTemp,monthly minimum,5.757,NA
+BHWS,2013,Dec,BHWS_HMP45c,airTemp,monthly minimum,-0.586,NA
+BHWS,2014,Jan,BHWS_HMP45c,airTemp,monthly minimum,3.981,NA
+BHWS,2014,Feb,BHWS_HMP45c,airTemp,monthly minimum,1.254,NA
+BHWS,2014,Mar,BHWS_HMP45c,airTemp,monthly minimum,3.743,NA
+BHWS,2014,Apr,BHWS_HMP45c,airTemp,monthly minimum,3.436,NA
+BHWS,2014,May,BHWS_HMP45c,airTemp,monthly minimum,6.405,NA
+BHWS,2014,Jun,BHWS_HMP45c,airTemp,monthly minimum,7.406,NA
+BHWS,2014,Jul,BHWS_HMP45c,airTemp,monthly minimum,9.35,NA
+BHWS,2014,Aug,BHWS_HMP45c,airTemp,monthly minimum,8.78,NA
+BHWS,2014,Sep,BHWS_HMP45c,airTemp,monthly minimum,9.75,NA
+BHWS,2014,Oct,BHWS_HMP45c,airTemp,monthly minimum,8.06,NA
+BHWS,2014,Nov,BHWS_HMP45c,airTemp,monthly minimum,7.376,NA
+BHWS,2014,Dec,BHWS_HMP45c,airTemp,monthly minimum,2.428,NA
+BHWS,2015,Jan,BHWS_HMP45c,airTemp,monthly minimum,3.28,NA
+BHWS,2015,Feb,BHWS_HMP45c,airTemp,monthly minimum,4.593,NA
+BHWS,2015,Mar,BHWS_HMP45c,airTemp,monthly minimum,6.111,NA
+BHWS,2015,Apr,BHWS_HMP45c,airTemp,monthly minimum,4.245,NA
+BHWS,2015,May,BHWS_HMP45c,airTemp,monthly minimum,6.126,NA
+BHWS,2015,Jun,BHWS_HMP45c,airTemp,monthly minimum,7.983,NA
+BHWS,2015,Jul,BHWS_HMP45c,airTemp,monthly minimum,9.84,NA
+BHWS,2015,Aug,BHWS_HMP45c,airTemp,monthly minimum,9.38,NA
+BHWS,2015,Sep,BHWS_HMP45c,airTemp,monthly minimum,8.75,NA
+BHWS,2015,Oct,BHWS_HMP45c,airTemp,monthly minimum,12.49,NA
+BHWS,2015,Nov,BHWS_HMP45c,airTemp,monthly minimum,1.292,NA
+BHWS,2015,Dec,BHWS_HMP45c,airTemp,monthly minimum,NA,Temperature sensor malfunction
+BHWS,2016,Jan,BHWS_HMP45c,airTemp,monthly minimum,3.353,Temperature sensor malfunction Jan 2016 data is from iButton sensor 1/15/16 -1/31/16
+BHWS,2016,Feb,BHWS_HMP45c,airTemp,monthly minimum,1.786,Temperature sensor malfunction Feb 2016 data is from iButton sensor 2/1/2016-2/2/2016
+BHWS,2016,Mar,BHWS_HMP45c,airTemp,monthly minimum,3.654,NA
+BHWS,2016,Apr,BHWS_HMP45c,airTemp,monthly minimum,4.526,NA
+BHWS,2016,May,BHWS_HMP45c,airTemp,monthly minimum,6.799,NA
+BHWS,2016,Jun,BHWS_HMP45c,airTemp,monthly minimum,7.437,NA
+BHWS,2016,Jul,BHWS_HMP45c,airTemp,monthly minimum,7.391,NA
+BHWS,2016,Aug,BHWS_HMP45c,airTemp,monthly minimum,7.49,NA
+BHWS,2016,Sep,BHWS_HMP45c,airTemp,monthly minimum,7.556,NA
+BHWS,2010,Oct,BHWS_HMP45c,airTemp,monthly average,15.86373593,NA
+BHWS,2010,Nov,BHWS_HMP45c,airTemp,monthly average,11.44615278,NA
+BHWS,2010,Dec,BHWS_HMP45c,airTemp,monthly average,8.707564516,NA
+BHWS,2011,Jan,BHWS_HMP45c,airTemp,monthly average,10.38111828,NA
+BHWS,2011,Feb,BHWS_HMP45c,airTemp,monthly average,9.069133557,NA
+BHWS,2011,Mar,BHWS_HMP45c,airTemp,monthly average,9.150869288,NA
+BHWS,2011,Apr,BHWS_HMP45c,airTemp,monthly average,11.03612778,NA
+BHWS,2011,May,BHWS_HMP45c,airTemp,monthly average,12.69426579,NA
+BHWS,2011,Jun,BHWS_HMP45c,airTemp,monthly average,16.78214097,NA
+BHWS,2011,Jul,BHWS_HMP45c,airTemp,monthly average,18.55241599,NA
+BHWS,2011,Aug,BHWS_HMP45c,airTemp,monthly average,18.80745885,NA
+BHWS,2011,Sep,BHWS_HMP45c,airTemp,monthly average,20.61642708,NA
+BHWS,2011,Oct,BHWS_HMP45c,airTemp,monthly average,16.92820901,NA
+BHWS,2011,Nov,BHWS_HMP45c,airTemp,monthly average,10.4459191,NA
+BHWS,2011,Dec,BHWS_HMP45c,airTemp,monthly average,10.45815087,NA
+BHWS,2012,Jan,BHWS_HMP45c,airTemp,monthly average,10.49298891,NA
+BHWS,2012,Feb,BHWS_HMP45c,airTemp,monthly average,10.04957256,NA
+BHWS,2012,Mar,BHWS_HMP45c,airTemp,monthly average,9.062118952,NA
+BHWS,2012,Apr,BHWS_HMP45c,airTemp,monthly average,12.06112743,NA
+BHWS,2012,May,BHWS_HMP45c,airTemp,monthly average,15.63354536,NA
+BHWS,2012,Jun,BHWS_HMP45c,airTemp,monthly average,17.70202014,NA
+BHWS,2012,Jul,BHWS_HMP45c,airTemp,monthly average,18.96370632,NA
+BHWS,2012,Aug,BHWS_HMP45c,airTemp,monthly average,19.83572648,NA
+BHWS,2012,Sep,BHWS_HMP45c,airTemp,monthly average,18.38010313,NA
+BHWS,2012,Oct,BHWS_HMP45c,airTemp,monthly average,16.23391331,NA
+BHWS,2012,Nov,BHWS_HMP45c,airTemp,monthly average,12.74386771,NA
+BHWS,2012,Dec,BHWS_HMP45c,airTemp,monthly average,8.231457325,NA
+BHWS,2013,Jan,BHWS_HMP45c,airTemp,monthly average,9.132284034,NA
+BHWS,2013,Feb,BHWS_HMP45c,airTemp,monthly average,10.02818527,NA
+BHWS,2013,Mar,BHWS_HMP45c,airTemp,monthly average,11.56343347,NA
+BHWS,2013,Apr,BHWS_HMP45c,airTemp,monthly average,14.18403819,NA
+BHWS,2013,May,BHWS_HMP45c,airTemp,monthly average,16.30105141,NA
+BHWS,2013,Jun,BHWS_HMP45c,airTemp,monthly average,18.51366563,NA
+BHWS,2013,Jul,BHWS_HMP45c,airTemp,monthly average,18.20847581,NA
+BHWS,2013,Aug,BHWS_HMP45c,airTemp,monthly average,18.28603159,NA
+BHWS,2013,Sep,BHWS_HMP45c,airTemp,monthly average,18.3891108,NA
+BHWS,2013,Oct,BHWS_HMP45c,airTemp,monthly average,16.67027325,NA
+BHWS,2013,Nov,BHWS_HMP45c,airTemp,monthly average,13.69687207,NA
+BHWS,2013,Dec,BHWS_HMP45c,airTemp,monthly average,11.02654503,NA
+BHWS,2014,Jan,BHWS_HMP45c,airTemp,monthly average,14.42472379,NA
+BHWS,2014,Feb,BHWS_HMP45c,airTemp,monthly average,10.03952902,NA
+BHWS,2014,Mar,BHWS_HMP45c,airTemp,monthly average,12.81027587,NA
+BHWS,2014,Apr,BHWS_HMP45c,airTemp,monthly average,13.80432361,NA
+BHWS,2014,May,BHWS_HMP45c,airTemp,monthly average,17.14144422,NA
+BHWS,2014,Jun,BHWS_HMP45c,airTemp,monthly average,19.2306941,NA
+BHWS,2014,Jul,BHWS_HMP45c,airTemp,monthly average,19.36849462,NA
+BHWS,2014,Aug,BHWS_HMP45c,airTemp,monthly average,17.79128696,NA
+BHWS,2014,Sep,BHWS_HMP45c,airTemp,monthly average,17.97540972,NA
+BHWS,2014,Oct,BHWS_HMP45c,airTemp,monthly average,18.98415798,NA
+BHWS,2014,Nov,BHWS_HMP45c,airTemp,monthly average,13.68794028,NA
+BHWS,2014,Dec,BHWS_HMP45c,airTemp,monthly average,10.43272917,NA
+BHWS,2015,Jan,BHWS_HMP45c,airTemp,monthly average,12.83922782,NA
+BHWS,2015,Feb,BHWS_HMP45c,airTemp,monthly average,13.37405878,NA
+BHWS,2015,Mar,BHWS_HMP45c,airTemp,monthly average,14.5649711,NA
+BHWS,2015,Apr,BHWS_HMP45c,airTemp,monthly average,13.2265566,NA
+BHWS,2015,May,BHWS_HMP45c,airTemp,monthly average,12.67489751,NA
+BHWS,2015,Jun,BHWS_HMP45c,airTemp,monthly average,19.25803576,NA
+BHWS,2015,Jul,BHWS_HMP45c,airTemp,monthly average,18.90232863,NA
+BHWS,2015,Aug,BHWS_HMP45c,airTemp,monthly average,19.24564852,NA
+BHWS,2015,Sep,BHWS_HMP45c,airTemp,monthly average,20.95908333,NA
+BHWS,2015,Oct,BHWS_HMP45c,airTemp,monthly average,18.91661538,NA
+BHWS,2015,Nov,BHWS_HMP45c,airTemp,monthly average,11.25751289,NA
+BHWS,2015,Dec,BHWS_HMP45c,airTemp,monthly average,NA,Temperature sensor malfunction
+BHWS,2016,Jan,BHWS_HMP45c,airTemp,monthly average,10.34206897,Temperature sensor malfunction Jan 2016 data is from iButton sensor 1/15/16 -1/31/16
+BHWS,2016,Feb,BHWS_HMP45c,airTemp,monthly average,6.364587879,Temperature sensor malfunction Feb 2016 data is from iButton sensor 2/1/2016-2/2/2016
+BHWS,2016,Mar,BHWS_HMP45c,airTemp,monthly average,11.09492003,NA
+BHWS,2016,Apr,BHWS_HMP45c,airTemp,monthly average,13.96565208,NA
+BHWS,2016,May,BHWS_HMP45c,airTemp,monthly average,15.13065759,NA
+BHWS,2016,Jun,BHWS_HMP45c,airTemp,monthly average,19.60724757,NA
+BHWS,2016,Jul,BHWS_HMP45c,airTemp,monthly average,19.61333535,NA
+BHWS,2016,Aug,BHWS_HMP45c,airTemp,monthly average,17.3199291,NA
+BHWS,2016,Sep,BHWS_HMP45c,airTemp,monthly average,19.29058611,NA
+BHWS,2010,Oct,BHWS_HMP45c,airTemp,monthly maximum,33.93,NA
+BHWS,2010,Nov,BHWS_HMP45c,airTemp,monthly maximum,27.03,NA
+BHWS,2010,Dec,BHWS_HMP45c,airTemp,monthly maximum,18.18,NA
+BHWS,2011,Jan,BHWS_HMP45c,airTemp,monthly maximum,24.52,NA
+BHWS,2011,Feb,BHWS_HMP45c,airTemp,monthly maximum,25.56,NA
+BHWS,2011,Mar,BHWS_HMP45c,airTemp,monthly maximum,27.96,NA
+BHWS,2011,Apr,BHWS_HMP45c,airTemp,monthly maximum,25.55,NA
+BHWS,2011,May,BHWS_HMP45c,airTemp,monthly maximum,29.04,NA
+BHWS,2011,Jun,BHWS_HMP45c,airTemp,monthly maximum,33.14,NA
+BHWS,2011,Jul,BHWS_HMP45c,airTemp,monthly maximum,34.86,NA
+BHWS,2011,Aug,BHWS_HMP45c,airTemp,monthly maximum,32.26,NA
+BHWS,2011,Sep,BHWS_HMP45c,airTemp,monthly maximum,34.52,NA
+BHWS,2011,Oct,BHWS_HMP45c,airTemp,monthly maximum,29.3,NA
+BHWS,2011,Nov,BHWS_HMP45c,airTemp,monthly maximum,22.36,NA
+BHWS,2011,Dec,BHWS_HMP45c,airTemp,monthly maximum,22.81,NA
+BHWS,2012,Jan,BHWS_HMP45c,airTemp,monthly maximum,20.54,NA
+BHWS,2012,Feb,BHWS_HMP45c,airTemp,monthly maximum,23.33,NA
+BHWS,2012,Mar,BHWS_HMP45c,airTemp,monthly maximum,21.78,NA
+BHWS,2012,Apr,BHWS_HMP45c,airTemp,monthly maximum,28.52,NA
+BHWS,2012,May,BHWS_HMP45c,airTemp,monthly maximum,29.94,NA
+BHWS,2012,Jun,BHWS_HMP45c,airTemp,monthly maximum,36.7,NA
+BHWS,2012,Jul,BHWS_HMP45c,airTemp,monthly maximum,33.89,NA
+BHWS,2012,Aug,BHWS_HMP45c,airTemp,monthly maximum,35.25,NA
+BHWS,2012,Sep,BHWS_HMP45c,airTemp,monthly maximum,33.44,NA
+BHWS,2012,Oct,BHWS_HMP45c,airTemp,monthly maximum,36.91,NA
+BHWS,2012,Nov,BHWS_HMP45c,airTemp,monthly maximum,26.23,NA
+BHWS,2012,Dec,BHWS_HMP45c,airTemp,monthly maximum,20.12,NA
+BHWS,2013,Jan,BHWS_HMP45c,airTemp,monthly maximum,18.98,NA
+BHWS,2013,Feb,BHWS_HMP45c,airTemp,monthly maximum,20.83,NA
+BHWS,2013,Mar,BHWS_HMP45c,airTemp,monthly maximum,23.85,NA
+BHWS,2013,Apr,BHWS_HMP45c,airTemp,monthly maximum,29.46,NA
+BHWS,2013,May,BHWS_HMP45c,airTemp,monthly maximum,31.14,NA
+BHWS,2013,Jun,BHWS_HMP45c,airTemp,monthly maximum,36.93,NA
+BHWS,2013,Jul,BHWS_HMP45c,airTemp,monthly maximum,36.39,NA
+BHWS,2013,Aug,BHWS_HMP45c,airTemp,monthly maximum,33.08,NA
+BHWS,2013,Sep,BHWS_HMP45c,airTemp,monthly maximum,34.3,NA
+BHWS,2013,Oct,BHWS_HMP45c,airTemp,monthly maximum,27.79,NA
+BHWS,2013,Nov,BHWS_HMP45c,airTemp,monthly maximum,24.39,NA
+BHWS,2013,Dec,BHWS_HMP45c,airTemp,monthly maximum,22.58,NA
+BHWS,2014,Jan,BHWS_HMP45c,airTemp,monthly maximum,25.32,NA
+BHWS,2014,Feb,BHWS_HMP45c,airTemp,monthly maximum,20.81,NA
+BHWS,2014,Mar,BHWS_HMP45c,airTemp,monthly maximum,23.71,NA
+BHWS,2014,Apr,BHWS_HMP45c,airTemp,monthly maximum,29.85,NA
+BHWS,2014,May,BHWS_HMP45c,airTemp,monthly maximum,31.15,NA
+BHWS,2014,Jun,BHWS_HMP45c,airTemp,monthly maximum,34.9,NA
+BHWS,2014,Jul,BHWS_HMP45c,airTemp,monthly maximum,34.65,NA
+BHWS,2014,Aug,BHWS_HMP45c,airTemp,monthly maximum,34.12,NA
+BHWS,2014,Sep,BHWS_HMP45c,airTemp,monthly maximum,34.51,NA
+BHWS,2014,Oct,BHWS_HMP45c,airTemp,monthly maximum,34.09,NA
+BHWS,2014,Nov,BHWS_HMP45c,airTemp,monthly maximum,26.67,NA
+BHWS,2014,Dec,BHWS_HMP45c,airTemp,monthly maximum,19.44,NA
+BHWS,2015,Jan,BHWS_HMP45c,airTemp,monthly maximum,24.49,NA
+BHWS,2015,Feb,BHWS_HMP45c,airTemp,monthly maximum,23.59,NA
+BHWS,2015,Mar,BHWS_HMP45c,airTemp,monthly maximum,25.55,NA
+BHWS,2015,Apr,BHWS_HMP45c,airTemp,monthly maximum,29.65,NA
+BHWS,2015,May,BHWS_HMP45c,airTemp,monthly maximum,26.2,NA
+BHWS,2015,Jun,BHWS_HMP45c,airTemp,monthly maximum,36.75,NA
+BHWS,2015,Jul,BHWS_HMP45c,airTemp,monthly maximum,35.37,NA
+BHWS,2015,Aug,BHWS_HMP45c,airTemp,monthly maximum,37.59,NA
+BHWS,2015,Sep,BHWS_HMP45c,airTemp,monthly maximum,36.73,NA
+BHWS,2015,Oct,BHWS_HMP45c,airTemp,monthly maximum,29.16,NA
+BHWS,2015,Nov,BHWS_HMP45c,airTemp,monthly maximum,23.54,NA
+BHWS,2015,Dec,BHWS_HMP45c,airTemp,monthly maximum,NA,Temperature sensor malfunction
+BHWS,2016,Jan,BHWS_HMP45c,airTemp,monthly maximum,17.881,Temperature sensor malfunction Jan 2016 data is from iButton sensor 1/15/16 -1/31/16
+BHWS,2016,Feb,BHWS_HMP45c,airTemp,monthly maximum,12.624,Temperature sensor malfunction Feb 2016 data is from iButton sensor 2/1/2016-2/2/2016
+BHWS,2016,Mar,BHWS_HMP45c,airTemp,monthly maximum,23.06,NA
+BHWS,2016,Apr,BHWS_HMP45c,airTemp,monthly maximum,30.84,NA
+BHWS,2016,May,BHWS_HMP45c,airTemp,monthly maximum,30.45,NA
+BHWS,2016,Jun,BHWS_HMP45c,airTemp,monthly maximum,35.44,NA
+BHWS,2016,Jul,BHWS_HMP45c,airTemp,monthly maximum,35.34,NA
+BHWS,2016,Aug,BHWS_HMP45c,airTemp,monthly maximum,32.43,NA
+BHWS,2016,Sep,BHWS_HMP45c,airTemp,monthly maximum,35.48,NA

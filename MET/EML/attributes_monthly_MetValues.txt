@@ -1,0 +1,9 @@
+attributeName	attributeDefinition	class	unit	dateTimeFormatString	missingValueCode	missingValueCodeExplanation
+site_id		categorical				
+Year		numeric	!Add units here!			
+Month		categorical				
+sensor_id		categorical				
+sensor_type		categorical				
+aggregation_stat		categorical				
+sensor_observation		numeric	!Add units here!			
+QC_Comments		categorical				

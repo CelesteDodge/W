@@ -1,0 +1,7 @@
+﻿This automatic weather station, which is run via a CRBasic program, includes above ground sensors for solar radiation, temperature and humidity, rainfall, windspeed, wind direction, 
+two-dimensional wind speed and direction, leaf wetness and barometric pressure. Specific instruments used include a CR3000 datalogger, solar radiation (LI200S), temperature and humidity 
+(HMP-45C), rainfall (TE-525), windspeed (014A), wind direction (024A), two-dimensional wind speed and direction (Wind Sonic Ultrsonic Wind Sensor 1405-PK?), wetness (Decagon LWS) 
+and barometric pressure (PTB120/ CS106).Data freqency is at 15-minute intervals, and rainfall data is collected additionally in an a event based manner, driven by every hundreth of an 
+inch of precipitation. All above ground sensors are co-located with the below ground sensors at the Bechtel House weather station, . Below ground soil Moisture is quantified in terms 
+of soil water content by time delay reflectometer (CS615) and soil waterpotential by heat dissapation probes (CS229L) each at four different depths, which are 6, 12, 22, and 36 inches 
+below the soil surface.
