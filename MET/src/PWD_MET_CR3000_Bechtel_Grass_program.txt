@@ -1,0 +1,383 @@
+' CR3000
+' Created by David Andersen
+' modified 10/2/2010 @ 4:30pm - changed rain1 to fixed size
+' modified 9/13/2011 to add daily rain, max wind gust - also changed min wind speed to 0.01 for bug in Visual Weather software
+'   I also removed the VW calcs from the datalogger, we can do this in post processing and it saves memory
+' modified by Frank Anderson on 1/17/2013 by adding the water potential calculations for the 4 Heat dissipation probes (CS229) 
+'   and actual VWC from four Volumetric Water Content Probes (CS616) @ depths:  6", 12", 22", and 36".
+'   For the heat dissipation probes, the inital temprerature, temperature after one second, and the termperature after 20s are 
+'   used to calculate the delta temperature. The subroutine TempCorr, corrects the change in temperature over 20 seconds, by
+'   normalizing it with the initial temperature.  Subroutine PsiCalc, calculates the water potential based
+'   on the Van Genucten calibration parameters obtained during initial calibrations. 
+' modified by Frank Anderson on 9/20/2013, to add the volumetric water content calculations, we used soil moisture samples 
+'   taken on 1/3/2013 (Wet) and 8/13/2013 (Dry) to calibrate the CS616 probes. 
+' modified by David Andersen on 9/21/2013 to include WINDSONIC-1 ultrasonic wind sensor, Davis Instruments Rain Gauge
+'   and CSxxx Leaf Wetness Sensor
+' modified on 08/29/2014 by Dave Andersen and Celeste Dodge, to include LWS at port 10H (aka 19) and changed anomometer multiplier from 0.2429 to 0.8.
+'   Also removed annual totalize from the Davis adn TE525 rain guages and table, but kept event driven table  
+' modified on 9/24/2014 by Celeste Dodge and Dave Andersen to change LWS channel to 27 excitation channel to 2. LWS added to 15 minute table 
+'   and LWS table removed. Also changed TE525 variable to TE525_Rain to match Davis_Rain variable format
+' modified on 10/09/2014 Celeste Dodge, to correct LWS wiring so red=data out
+' modified on 9/4/2015 by Celeste Dodge to add CS106/PTB110 barometer, bring back annual rain TOT, and remove Davis Rain (destroyed in Dec12 2014)
+' modified on 9/17/15 by Celeste and Dave Andersen. Set ports on Barmetric pressure and added rain_yr variable back into program and 15min table
+' modified on 9/17/2015 by Celeste Dodge  Rain_yr changed to TE525_Rain_yr, and Davis_Rain and Davis_Rain_yr added back  in
+' modified on 9/18/2015 by Celeste Dodge - added rain_yr resets addedd for both TE525_rain_yr and Davis_rain_yr for 10/1 at 12am. And corrected barometer for elevation (1205 Ft.) 
+' by changing last number in VoltSE line from 500 to 543.3526, added comment about LI200s / LI200x sensor name too
+' modified on 9/30/2015 by Frank Anderson - Changed the barometer multiplier from 0.24 to 0.12 as the CR3000 has a range of 5000mV and not 2500mV (see CS106 manual for multiplier calc)
+' **********************************************************************************************************
+'                                      DECLARATIONS
+' **********************************************************************************************************
+
+SequentialMode
+
+Dim loopcount
+Public BattV
+Public WS_ms
+Public WindDir
+Dim windsonic(4) As String
+Public ws_2D
+Public winddir_2D 
+Public wind_diag
+Public wind_nmbr_bytes_rtrnd
+Public ib_bytes_str
+Public SlrkW
+Public SlrMJ
+Public AirTC
+Public RH
+Public PTemp_C
+Public TE525_Rain
+Public TE525_Rain_yr
+Public Davis_Rain
+Public Davis_Rain_yr
+Public LWmV
+'Public LWMDry
+'Public LWMCon
+'Public LWMWet
+Public BP
+Public BP_mmHg
+
+Const NumCS616 = 4                                              ' Enter number of CS616 sensors to measure
+Dim VWC_Slp(NumCS616),VWC_Off(NumCS616)
+Public VWC(NumCS616), PA_mS(NumCS616)
+Public Cum_VWC  
+Const Num229 = 4                                                ' Enter number of 229 sensors to measure                                         
+Const CalTemp = 20                                              ' Enter calibraion temperature (deg C)
+Dim dTdry(Num229), dTwet(Num229)
+Dim s, so, i, olds, f, j, k, l
+Dim DeltaTcorr
+Dim scaleddt(Num229), Psi, drydtscaler
+Dim newdt, calcpsi
+Dim m(Num229), n(Num229), alpha(Num229)
+Dim H2OPotent
+Dim VolMetH2OCont 
+Public StartTemp_C(Num229), Temp_1sec_C(Num229)
+Public Temp_20sec_C(Num229), DeltaT_C(Num229)
+Public WaterPotent(Num229)
+
+Units StartTemp_C() =  Deg C
+Units DeltaT_C()  = Deg C
+Units scaleddt = Deg C
+
+Public Time(9)
+Alias Time(1) = Year						'This Time information is the datalogger clock
+Alias Time(2) = Month					  'used for occupied check, holiday check, etc.
+Alias Time(3) = Day_of_Month
+Alias Time(4) = Hour_of_Day
+Alias Time(5) = Minutes
+Alias Time(6) = Seconds
+Alias Time(7) = Microseconds
+Alias Time(8) = Day_of_Week
+Alias Time(9) = Day_of_Year
+
+Units BattV = Volts
+Units WS_ms = meters/second
+Units WindDir = degrees
+Units ws_2D = meters/second
+Units winddir_2D = degrees
+Units wind_diag = unitless
+Units SlrkW = kW/m^2
+Units SlrMJ = MJ/m^2
+Units AirTC = Deg C
+Units RH = %
+Units LWmV = mV
+Units TE525_Rain_yr = inches
+Units Davis_Rain_yr = inches
+'Units LWMDry = Minutes
+'Units LWMCon = Minutes
+'Units LWMWet = Minutes
+Units PTemp_C = Deg C     
+Units BP = hPa
+Units BP_mmHg=mmHg
+
+Dim in_bytes_str As String * 21
+Dim checksum_flg As Boolean
+Dim disable_flg As Boolean
+
+' **********************************************************************************************************
+'                                     OUTPUT SECTION 
+' **********************************************************************************************************
+
+DataTable(Bechtel,True,-1)
+	DataInterval(0,15,Min,10)
+	WindVector (1,WS_ms,WindDir,FP2,False,0,0,1)
+	FieldNames("WSpd_ms,W_Dir")
+	Maximum(1,WS_ms,FP2,0,0)
+	WindVector (1,ws_2D,winddir_2D,IEEE4,False,0,0,1)
+	FieldNames("WSp_2D, WDir_2D")
+	Maximum(1,ws_2D,FP2,0,0)
+	Average(1,SlrkW,FP2,False)
+	Totalize(1,SlrMJ,IEEE4,False)
+	Average(1,AirTC,FP2,False)
+	Average(1,RH,FP2,0)
+	Totalize(1,TE525_Rain,FP2,False)
+	Average(1,LWmV,FP2,False)
+	'Totalize(1,LWMDry,FP2,False) not sure about threshholds yet
+	'Totalize(1,LWMCon,FP2,False)
+	'Totalize(1,LWMWet,FP2,False)
+	Average(1,BP_mmHg,FP2,False)   'CS106
+	Sample(1,TE525_Rain_yr,FP2)
+	Sample(1,Davis_Rain_yr,FP2)
+EndTable
+
+'Event driven table for rain bucket tips
+DataTable(Bechtel_TE525,TE525_Rain>0,5000)
+  Sample(1,TE525_Rain,FP2)
+EndTable
+
+DataTable(Bechtel_Davis, Davis_Rain>0,5000)
+  Sample(1,Davis_Rain_yr,FP2)
+EndTable 
+ 
+
+DataTable(Bechtel_soilm,True,-1)
+	DataInterval(0,60,Min,10)
+	Sample (NumCS616,PA_mS, FP2)
+  Sample (NumCS616,VWC(),FP2)
+  Sample (1,Cum_VWC,FP2)
+	Sample (Num229,StartTemp_C(),FP2)
+  Sample (Num229,DeltaT_C(),FP2)
+  Sample (Num229,scaleddt(),FP2)
+  Sample (Num229,WaterPotent(),FP2)
+EndTable
+
+'Table for equipment monitoring plus other stuff (what is other stuff?)
+DataTable(Bechtel_daily_sum,true,-1)
+  DataInterval(0,1440,min,0)
+  Minimum(1,BattV,FP2,false,true)
+  Maximum(1,PTemp_C,FP2,0,true)
+  Minimum(1,AirTC,FP2,false,true)
+  Maximum(1,AirTC,FP2,false,true)
+  Totalize(1,SlrMJ,IEEE4,false)
+EndTable
+
+
+
+' **********************************************************************************************************
+'                                             SUBROUTINES 
+' **********************************************************************************************************
+
+Sub TempCorr                                                  ' Subroutine to temperature correct DeltaT_C
+    s = (dTdry(j) - DeltaT_C(j))/(dTdry(j) - dTwet(j))
+    so = s
+    i = 0
+    Do 
+      i = i +1: 
+      olds = so
+      f = -0.0133*so^5 + 0.0559*so^4 - 0.0747*so^3 + 0.0203*so^2 + 0.011*so + 0.0013
+      so = s - f*(StartTemp_C(j) - CalTemp)
+    Loop Until (ABS(so - olds) < 0.001) OR (i > 10)
+    DeltaTcorr = so 
+    If DeltaTcorr < 0 OR DeltaTcorr > 1 Then DeltaTcorr = "#N/A"
+EndSub
+
+Sub PsiCalc                                                ' Subroutine to calculate water potential
+    If scaleddt(j) = "#N/A" Then 
+      Psi = "#N/A"
+    Else
+      drydtscaler = (1 + (alpha(j) * 10000)^n(j))^(-m(j))
+      newdt = scaleddt(j) * (1 - drydtscaler) + drydtscaler
+      calcpsi = (((newdt^(-1/m(j))-1)^(1/n(j)))/alpha(j))
+      Psi = calcpsi
+    EndIf
+    If Psi < 0 OR Psi > 10000 Then Psi = "#N/A"
+EndSub
+  
+Sub VolMetH2OContCal
+    VolMetH2OCont = (VWC_Slp(k)*PA_mS(k))+VWC_Off(k)
+EndSub
+  
+' **********************************************************************************************************
+'                                          PROGRAM 
+' **********************************************************************************************************
+
+BeginProg
+    'Enter dTdry and dTwet values obtained for each probe:
+    dTdry(1) = 2.617: dTdry(2) = 2.783: dTdry(3) = 2.638: dTdry(4) = 2.357
+    dTwet(1) = 0.595: dTwet(2) = 0.610: dTwet(3) = 0.598: dTwet(4) = 0.587
+    m(1) = 0.326: m(2) = 0.356: m(3) = 0.437: m(4) = 0.229
+    n(1) = 1.257: n(2) = 1.220: n(3) = 1.128: n(4) = 1.729
+    alpha(1) = 2.836: alpha(2) = 2.913: alpha(3) = 2.107: alpha(4) = 3.928
+    'Enter TDR Cal from Soil Samples (Wet and Dry conditions)
+    VWC_Slp(1) = 0.2676: VWC_Slp(2) = 0.4745: VWC_Slp(3) = 0.3537: VWC_Slp(4) = 0.1373
+    VWC_Off(1) = -0.0832: VWC_Off(2) = -0.4216: VWC_Off(3) = -0.1877: VWC_Off(4) = 0.1218 
+  
+    ' Open COM2 for communications with the WINDSONIC1 
+    SerialOpen(Com2,9600,3,0,108)
+
+	Scan(10,Sec,1,0)
+	  ' Get the time
+	  RealTime (Time())
+	
+		'Default Datalogger Battery Voltage measurement BattV
+		Battery(BattV)
+	
+		'Wiring Panel Temperature measurement PTemp_C
+		PanelTemp(PTemp_C,_60Hz)	
+		
+		'014A Wind Speed Sensor measurement WS_ms
+		' BLK - P1
+		' WHT/CLR - GND
+		' multiplier = 0.8 changed from 0.2429 on 08/29/14
+		' offset = 0.447
+		PulseCount(WS_ms,1,1,2,1,0.8,0.447)
+		If WS_ms<0.457 Then WS_ms=0.01
+		
+		'024A Wind Direction Sensor measurement WindDir
+		' RED - SE1
+		' BLK - VX1
+		' WHT/CLR - GND
+		' multiplier = 703.13
+		BrHalf(WindDir,1,mV5000,1,1,1,5000,True,2000,250,703.13,0)
+
+		' WINDSONIC1 2D ULTRASONIC WIND SENSOR
+		SerialInRecord(Com2,in_bytes_str,&h02,0,&h0D0A,wind_nmbr_bytes_rtrnd,01)
+		SplitStr(windsonic(),in_bytes_str,",",4,4)
+		winddir_2D=windsonic(1)
+		ws_2D=windsonic(2)
+		wind_diag = windsonic(4)
+'		checksum_flg = ((HexToDec (Right (ib_bytes_str,2))) EQV (CheckSum (in_bytes_str,9,Len (in_bytes_str)-3)))
+'		disable_flg = (NOT (checksum_flg) OR (wind_nmbr_bytes_rtrnd=0) OR (wind_diag<>0))
+ 	
+		'LI200S Pyranometer measurements SlrMJ and SlrkW (Sensor aka LI200x with completion resistors added by CS) 
+		' RED - DE2(HI)
+		' BLK - DE2(LO)
+		' jumper from DE2L to GND
+		' calibration is 64.047 uA/kW/m^2
+		VoltDiff(SlrkW,1,mV20,2,True,0,_60Hz,1,0)
+		If SlrkW<0 Then SlrkW=0
+		SlrMJ=SlrkW*0.001561353
+		SlrkW=SlrkW*0.1561353                           
+			
+		'HMP45C  (6-wire, panel switched power) Temperature & Relative Humidity Sensor measurements AirTC and RH
+		' YEL - SE2
+		' BLU - SE5
+		' RED - SW12V-1
+		' WHT/BLK/CLR - GND
+		PortSet(9,1)
+		Delay(0,150,mSec)
+		VoltSe(AirTC,1,mV1000,2,0,0,_60Hz,0.1,-40)
+		VoltSe(RH,1,mV1000,5,0,0,_60Hz,0.1,0)
+		PortSet(9,0)
+		If RH>100 AND RH<108 Then RH=100
+		
+		'TE525_Rain/TE525WS Rain Gauge measurement Rain_in
+		' BLK - P2
+		' WHT/CLR - GND
+		PulseCount(TE525_Rain,1,2,2,0,1,0)
+    TE525_Rain_yr = TE525_Rain_yr + TE525_Rain/100
+    
+  'Davis Instruments Rain Gauge measurement Davis_Rain
+		' BLK - P2
+		' WHT/CLR - GND
+		PulseCount(Davis_Rain,1,3,2,0,1,0)
+		Davis_Rain_yr = Davis_Rain_yr + Davis_Rain/100
+
+		'CS615 TDR Water Content Reflectometer measurements VW and PA_mS
+		' ORG - C1
+		' GRN - SE7-10
+		' RED - 12V
+		' BLK/CLR - GND
+		
+
+   If IfTime (0,60,min)
+			PortSet(1,1)		  
+ 			PeriodAvg(PA_mS(),4,mV5000,7,0,0,10,50,0.001,0)
+			PortSet(1,0)
+      For k = 1 To NumCS616
+        Call VolMetH2OContCal
+        VWC(k) = VolMetH2OCont
+      Next k
+      Cum_VWC = (VWC(1)*9)+(VWC(2)*8)+(VWC(3)*12)+(VWC(4)*7)
+			
+	  '229L Soil Water Potential
+	  ' BLU - DE(HI)6-9
+	  ' RED - DE(LO)6-9
+	  ' GRN - CE8(HI)
+	  ' BLK - CE8(LO)
+	  ' three measurements are taken, time=0,1,and 20 seconds
+	    TCDiff (StartTemp_C(),Num229,mV20C,6,TypeT,PTemp_C,True,0,_60Hz,1.0,0)
+   		PortSet(2,1)                                                                
+			Delay(0,1,sec) 
+			TCDiff (Temp_1sec_C(),Num229,mV20C,6,TypeT,PTemp_C,True,0,_60Hz,1.0,0)                                                             
+			Delay(0,19,sec)  
+			TCDiff (Temp_20sec_C(),Num229,mV20C,6,TypeT,PTemp_C,True,0,_60Hz,1.0,0)                                                           
+			PortSet(2,0)                                                                
+      For j = 1 To Num229
+        DeltaT_C(j) = Temp_20sec_C(j) - Temp_1sec_C(j)          ' Calculate temperature rise
+        Call TempCorr                                           ' Call temperature correction subroutine
+        scaleddt(j) = DeltaTcorr
+        Call PsiCalc
+        WaterPotent(j) = Psi
+      Next j
+		EndIf	  
+		
+		'LWS Dielectric Leaf Wetness Sensor measurement LWmV added 08/29/14
+		' RED - SE 27 
+		' WHT - VX2
+		' BRHalf(Dest,Reps,Range,SeChan,ExChan,MeasPEx,ExmV,RevEx,Settling,Integ,Mult,Offset)
+		  BrHalf(LWmV,1,mV5000,27,VX2,1,2500,False,10000,_60Hz,2500,0)
+		
+	'Will Determine Minutes Dry later from raw data (LWMDry), Minutes Wet or Contaminated (LWMCon), and Minutes Wet (LWMWet) for this Scan
+		  'LWMDry=0
+		  'LWMCon=0
+		  'LWMWet=0
+		  'If LWmV<274 Then
+			  'LWMDry= ?
+		  'Else
+			  'If LWmV>=284 Then
+				  'LWMWet=?
+			'Else
+				  'LWMCon=?
+			  'EndIf
+	  	'EndIf
+			
+
+		'CS106 / PTB110 Barometric Pressure measurement BP_mmHG
+		'RED -
+		'BLU -
+		'BLK -
+		'WHT -
+		'GRN -
+		'CLR  -
+		If TimeIntoInterval(14,15,Min) Then PortSet(6,1) 'set port Right!
+		If TimeIntoInterval(0,15,Min) Then 
+		VoltSe(BP,1,mV5000,19,1,0,_60Hz,0.240,543.3526) 
+		BP_mmHg=BP*0.75006
+		PortSet(6,0) 
+		EndIf 
+	
+		If Month=10 AND Day_of_Month=1 AND Hour_of_Day=0 AND Minutes=1 Then
+		  TE525_Rain_yr=0
+		  Davis_Rain_yr=0
+		EndIf
+
+		'Call Data Tables and Store Data
+		CallTable(Bechtel)
+		CallTable(Bechtel_TE525)
+		CallTable(Bechtel_Davis)
+		CallTable(Bechtel_soilm)
+		CallTable(Bechtel_daily_sum)
+	NextScan
+EndProg
+
+
