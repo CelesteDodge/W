@@ -36,7 +36,9 @@ ggplot()+
   geom_line(aes(x = plotData2$squarerootTime, y = plotData2$infiltration),
             color = 'blue')+
   ggtitle('HAR01_01')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   
+  xlim(0,50)+  
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 #save plot file
@@ -57,7 +59,9 @@ ggplot()+
   geom_line(aes(x = plot2Data2$squarerootTime, y = plot2Data2$infiltration),
             color = 'blue')+
   ggtitle('HAR01_02')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   
+  xlim(0,50)+   
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -82,7 +86,9 @@ ggplot()+
   geom_line(aes(x = plot3Data2$squarerootTime, y = plot3Data2$infiltration),
             color = 'blue')+
   ggtitle('HAR01_03')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+  
+  xlim(0,50)+
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -103,7 +109,9 @@ ggplot()+
   geom_line(aes(x = plot4Data2$squarerootTime, y = plot4Data2$infiltration),
             color = 'blue')+
   ggtitle('HAR01_04')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+  
+  xlim(0,50)+  
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -124,7 +132,9 @@ ggplot()+
   geom_line(aes(x = plot5Data2$squarerootTime, y = plot5Data2$infiltration),
             color = 'blue')+
   ggtitle('HAR01_05')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+  
+  xlim(0,50)+  
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -147,7 +157,9 @@ ggplot()+
   geom_line(aes(x = plot6Data2$squarerootTime, y = plot6Data2$infiltration),
             color = 'blue')+
   ggtitle('NAT01_01')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+  
+  xlim(0,50)+  
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -169,7 +181,9 @@ ggplot()+
   geom_line(aes(x = plot7Data2$squarerootTime, y = plot7Data2$infiltration),
             color = 'blue')+
   ggtitle('NAT01_02')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+  
+  xlim(0,50)+  
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -191,7 +205,9 @@ ggplot()+
   geom_line(aes(x = plot8Data2$squarerootTime, y = plot8Data2$infiltration),
             color = 'blue')+
   ggtitle('NAT01_03')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+  
+  xlim(0,50)+  
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -216,7 +232,9 @@ ggplot()+
   geom_line(aes(x = plot9Data2$squarerootTime, y = plot9Data2$infiltration),
             color = 'blue')+
   ggtitle('NAT01_04')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+  
+  xlim(0,50)+  
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -238,7 +256,9 @@ ggplot()+
   geom_line(aes(x = plot10Data2$squarerootTime, y = plot10Data2$infiltration),
             color = 'blue')+
   ggtitle('NAT01_05')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   
+  xlim(0,50)+  
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -261,7 +281,9 @@ ggplot()+
   geom_line(aes(x = plot11Data2$squarerootTime, y = plot11Data2$infiltration),
             color = 'sky blue')+
   ggtitle('MIX05_01')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+  
+  xlim(0,50)+   
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -285,7 +307,9 @@ ggplot()+
   geom_line(aes(x = plot12Data2$squarerootTime, y = plot12Data2$infiltration),
             color = 'blue')+
   ggtitle('MIX05_02')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+ 
+  xlim(0,50)+   
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -306,7 +330,9 @@ ggplot()+
   geom_line(aes(x = plot13Data2$squarerootTime, y = plot13Data2$infiltration),
             color = 'sky blue')+
   ggtitle('MIX05_03')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+  
+  xlim(0,50)+  
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -333,7 +359,9 @@ ggplot()+
   geom_line(aes(x = plot14Data2$squarerootTime, y = plot14Data2$infiltration),
             color = 'sky blue')+
   ggtitle('MIX05_04')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+  
+  xlim(0,50)+   
+  ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -354,7 +382,7 @@ ggplot()+
   geom_line(aes(x = plot15Data2$squarerootTime, y = plot15Data2$infiltration),
             color = 'sky blue')+
   ggtitle('MIX05_05')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -377,7 +405,7 @@ ggplot()+
   geom_line(aes(x = plot16Data2$squarerootTime, y = plot16Data2$infiltration),
             color = 'sky blue')+
   ggtitle('MED01_01')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -398,7 +426,7 @@ ggplot()+
   geom_line(aes(x = plot17Data2$squarerootTime, y = plot17Data2$infiltration),
             color = 'sky blue')+
   ggtitle('MED01_02')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -419,7 +447,7 @@ ggplot()+
   geom_line(aes(x = plot18Data2$squarerootTime, y = plot18Data2$infiltration),
             color = 'sky blue')+
   ggtitle('MED01_03')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -440,7 +468,7 @@ ggplot()+
   geom_line(aes(x = plot19Data2$squarerootTime, y = plot19Data2$infiltration),
             color = 'sky blue')+
   ggtitle('MED01_04')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -461,7 +489,7 @@ ggplot()+
   geom_line(aes(x = plot20Data2$squarerootTime, y = plot20Data2$infiltration),
             color = 'sky blue')+
   ggtitle('MED01_05')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -484,7 +512,7 @@ ggplot()+
   geom_line(aes(x = plot21Data2$squarerootTime, y = plot21Data2$infiltration),
             color = 'blue')+
   ggtitle('MED02_01')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -505,7 +533,7 @@ ggplot()+
   geom_line(aes(x = plot22Data2$squarerootTime, y = plot22Data2$infiltration),
             color = 'blue')+
   ggtitle('MED02_02')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -529,7 +557,7 @@ ggplot()+
   geom_line(aes(x = plot23Data2$squarerootTime, y = plot23Data2$infiltration),
             color = 'blue')+
   ggtitle('MED02_03')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -550,7 +578,7 @@ ggplot()+
   geom_line(aes(x = plot24Data2$squarerootTime, y = plot24Data2$infiltration),
             color = 'blue')+
   ggtitle('MED02_04')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -571,7 +599,7 @@ ggplot()+
   geom_line(aes(x = plot25Data2$squarerootTime, y = plot25Data2$infiltration),
             color = 'blue')+
   ggtitle('MED02_05')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -594,7 +622,7 @@ ggplot()+
   geom_line(aes(x = plot26Data2$squarerootTime, y = plot26Data2$infiltration),
             color = 'blue')+
   ggtitle('MIX01_01')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -615,7 +643,7 @@ ggplot()+
   geom_line(aes(x = plot27Data2$squarerootTime, y = plot27Data2$infiltration),
             color = 'blue')+
   ggtitle('MIX01_02')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -636,7 +664,7 @@ ggplot()+
   geom_line(aes(x = plot28Data2$squarerootTime, y = plot28Data2$infiltration),
             color = 'blue')+
   ggtitle('MIX01_03')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -657,7 +685,7 @@ ggplot()+
   geom_line(aes(x = plot29Data2$squarerootTime, y = plot29Data2$infiltration),
             color = 'blue')+
   ggtitle('MIX01_04')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -681,7 +709,7 @@ ggplot()+
   geom_line(aes(x = plot30Data2$squarerootTime, y = plot30Data2$infiltration),
             color = 'blue')+
   ggtitle('MIX01_05')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -704,7 +732,7 @@ ggplot()+
   geom_line(aes(x = plot31Data2$squarerootTime, y = plot31Data2$infiltration),
             color = 'blue')+
   ggtitle('MIX03_01')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -725,7 +753,7 @@ ggplot()+
   geom_line(aes(x = plot32Data2$squarerootTime, y = plot32Data2$infiltration),
             color = 'sky blue')+
   ggtitle('MIX03_02')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -746,7 +774,7 @@ ggplot()+
   geom_line(aes(x = plot33Data2$squarerootTime, y = plot33Data2$infiltration),
             color = 'sky blue')+
   ggtitle('MIX03_03')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -767,7 +795,7 @@ ggplot()+
   geom_line(aes(x = plot34Data2$squarerootTime, y = plot34Data2$infiltration),
             color = 'sky blue')+
   ggtitle('MIX03_04')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -788,7 +816,7 @@ ggplot()+
   geom_line(aes(x = plot35Data2$squarerootTime, y = plot35Data2$infiltration),
             color = 'blue')+
   ggtitle('MIX03_05')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -814,7 +842,7 @@ ggplot()+
   geom_line(aes(x = plot36Data2$squarerootTime, y = plot36Data2$infiltration),
             color = 'sky blue')+
   ggtitle('NAT02_01')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -835,7 +863,7 @@ ggplot()+
   geom_line(aes(x = plot37Data2$squarerootTime, y = plot37Data2$infiltration),
             color = 'blue')+
   ggtitle('NAT02_02')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -856,7 +884,7 @@ ggplot()+
   geom_line(aes(x = plot38Data2$squarerootTime, y = plot38Data2$infiltration),
             color = 'blue')+
   ggtitle('NAT02_03')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -877,7 +905,7 @@ ggplot()+
   geom_line(aes(x = plot39Data2$squarerootTime, y = plot39Data2$infiltration),
             color = 'sky blue')+
   ggtitle('NAT02_04')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
@@ -898,7 +926,9 @@ ggplot()+
   geom_line(aes(x = plot40Data2$squarerootTime, y = plot40Data2$infiltration),
             color = 'blue')+
   ggtitle('NAT02_05')+
-  theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+   xlim(0,50)+   ylim(0,6)+
   xlab('Square Root of Time (Seconds)')+
   ylab('Cummulative Infiltration')
 dev.off()
+
+

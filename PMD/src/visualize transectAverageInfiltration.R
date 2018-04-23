@@ -18,16 +18,20 @@ str(surveyResults)
 #Trim out rows not at GLM transects (transect = NA)
 glmSurveys <-surveys[! surveys$grasslandTransect %in% NA,]
 results <- merge(glmSurveys, surveyResults, by="survey_id")
-#Note the number of rows dropped from 93 to 91 (imperfect match on one survey id)
+#Format date field so x axis displays data chronologically
+results$Date <- as.Date(results$Date, "%m/%d/%Y")
+str(results)
+#Note the number of rows dropped from 97 to 91 (imperfect match on one survey id - maybe these are surveys I have, but don;t have obs data
 #*********************
-#QC issue to fix unmatched pair
+#QC issue check for unmatched pairs etc
 
 #rename the column  "LM_LengthOverTime_prelimC1" to "C1" for readability
 #It has the results we are interested in
 colnames(results)[19]
 colnames(results)[19] <-"C1"
+str(results)
 
-#Build box plots for each transect's unique survey dates
+#____Step 3__________Build box plots for each transect's unique survey dates
 
 #HAR01
 jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/rplot_boxplot_HAR01.jpg') 
@@ -93,36 +97,87 @@ boxplot(C1~Date,data=NAT02, main="NAT02: Preliminary Infiltration *suction not a
         ylim = c(0, 1.2))
 dev.off()
 
-#**********************
-#ISSUE: Not completed - single plot with all transects
-#***********************
+#____Step 4_______Account for suction with boxplots
+#Note: transect data loaded while making splots above
+library(ggplot2)
 
-boxplot(C1~grasslandTransect*Date,data=results,
-        col=(c("gold","darkgreen", "pink", "red", "purple","cyan","white", "blue", "sky blue")),
-        main="Preliminary Infiltration *note suction not accounted for*", 
-        xlab="Survey Date", ylab="Length of Water Over Time")
-#not clear which is which, what is happening with colors in combined graph
+jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/boxplot_3factors_HAR01.jpg') 
+ggplot(HAR01, aes(x = Date,  y = C1))+
+  geom_boxplot(aes(fill = suctionSetting,
+                   group = interaction(factor(Date), suctionSetting)))+
+  ggtitle("HAR01 Preliminary Average Infiltration") + theme(plot.title = element_text(hjust = 0.5))+
+  ylab("~ C1 (cm per minute)")+
+  geom_jitter(shape = 1)
+dev.off()
 
-#try Violin Plots
-install.packages("vioplot")
-library(vioplot)
+jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/boxplot_3factors_MED01.jpg') 
+ggplot(MED01, aes(x = Date,  y = C1))+
+  geom_boxplot(aes(fill = suctionSetting,
+                   group = interaction(factor(Date), suctionSetting)))+
+  ggtitle("MED01 Preliminary Average Infiltration") + theme(plot.title = element_text(hjust = 0.5))+
+  ylab("~ C1 (cm per minute)")
+geom_jitter(shape = 1)
+dev.off()
 
-#**** example
-# box- vs violin-plot
-par(mfrow=c(2,1))
-mu<-2
-si<-0.6
-bimodal<-c(rnorm(1000,-mu,si),rnorm(1000,mu,si))
-uniform<-runif(2000,-4,4)
-normal<-rnorm(2000,0,3)
-vioplot(bimodal,uniform,normal)
-boxplot(bimodal,uniform,normal)
+#Need to ignore dates where fewer than 4 surveys done
+unique(MED02$Date)
+MED02_fullDates <- MED02[which(MED02$Date == "2016-02-26"| MED02$Date == "2018-03-23"),]
+jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/boxplot_3factors_MED02.jpg') 
+ggplot(MED02_fullDates, aes(x = Date,  y = C1))+
+  geom_boxplot(aes(fill = suctionSetting,
+        group = interaction(factor(Date), suctionSetting)))+
+  ggtitle("MED02 Preliminary Average Infiltration") + theme(plot.title = element_text(hjust = 0.5))+
+  ylab("~ C1 (cm per minute)")
+geom_jitter(shape = 1)
+dev.off()
 
-mydata$bimodel <- bimodal
+#Need to ignore dates where fewer than 4 surveys done
+unique(MIX01$Date)
+MIX01_fullDates <- MIX01[which(MIX01$Date == "2016-02-05"| MIX01$Date == "2018-03-07"),]
+jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/boxplot_3factors_MIX01.jpg') 
+ggplot(MIX01_fullDates, aes(x = Date,  y = C1))+
+  geom_boxplot(aes(fill = suctionSetting,
+                   group = interaction(factor(Date), suctionSetting)))+
+  ggtitle("MIX01 Preliminary Average Infiltration") + theme(plot.title = element_text(hjust = 0.5))+
+  ylab("~ C1 (cm per minute)")
+geom_jitter(shape = 1)
+dev.off()
 
-x1 <- mtcars$mpg[mtcars$cyl==4]
-x2 <- mtcars$mpg[mtcars$cyl==6]
-x3 <- mtcars$mpg[mtcars$cyl==8]
-vioplot(x1, x2, x3, names=c("4 cyl", "6 cyl", "8 cyl"), 
-        col="gold")
-title("Violin Plots of Miles Per Gallon")
+jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/boxplot_3factors_MIX03.jpg') 
+ggplot(MIX03, aes(x = Date,  y = C1))+
+  geom_boxplot(aes(fill = suctionSetting,
+                   group = interaction(factor(Date), suctionSetting)))+
+  ggtitle("MIX03 Preliminary Average Infiltration") + theme(plot.title = element_text(hjust = 0.5))+
+  ylab("~ C1 (cm per minute)")
+geom_jitter(shape = 1)
+dev.off()
+
+jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/boxplot_3factors_MIX05.jpg') 
+ggplot(MIX05, aes(x = Date,  y = C1))+
+  geom_boxplot(aes(fill = suctionSetting,
+                   group = interaction(factor(Date), suctionSetting)))+
+  ggtitle("MIX05 Preliminary Average Infiltration") + theme(plot.title = element_text(hjust = 0.5))+
+  ylab("~ C1 (cm per minute)")
+geom_jitter(shape = 1)
+dev.off()
+
+jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/boxplot_3factors_NAT01.jpg') 
+ggplot(NAT01, aes(x = Date,  y = C1))+
+  geom_boxplot(aes(fill = suctionSetting,
+                   group = interaction(factor(Date), suctionSetting)))+
+  ggtitle("NAT01 Preliminary Average Infiltration") + theme(plot.title = element_text(hjust = 0.5))+
+  ylab("~ C1 (cm per minute)")
+geom_jitter(shape = 1)
+dev.off()
+
+#Need to ignore dates where fewer than 4 surveys done
+unique(NAT02$Date)
+NAT02_fullDates <- NAT02[which(NAT02$Date == "2016-02-13" | NAT02$Date == "2018-03-23"),]
+jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/boxplot_3factors_NAT02.jpg') 
+ggplot(NAT02_fullDates, aes(x = Date,  y = C1))+
+  geom_boxplot(aes(fill = suctionSetting,
+                   group = interaction(factor(Date), suctionSetting)))+
+  ggtitle("NAT02 Preliminary Average Infiltration") + theme(plot.title = element_text(hjust = 0.5))+
+  ylab("~ C1 (cm per minute)")
+geom_jitter(shape = 1)
+dev.off()
