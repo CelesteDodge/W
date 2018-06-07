@@ -23,12 +23,15 @@ unique(siteObs$survey_id,)
 #subset obs data into plot data for only this site's observations
 plotData <- obs[which(obs$survey_id =='PMDHAR01_01_18-03-07'),]
 plotData2 <- obs[which(obs$survey_id =='HAR01_01_15-11-17'),]
+plotData3 <- obs[which(obs$survey_id =='PMDHAR01_01_18-06-06'),]
 
 #__Step 2.2_______set up filename for plot
 jpeg(filename = 'C:/Users/cdodge/Desktop/GIT/W/PMD/summaries/plots/HAR01_01_minidisk_observations.jpg')
 
 #__Step 2.4_______build ggplot
 ggplot()+
+  geom_point(aes(x = plotData3$squarerootTime, y = plotData3$infiltration),
+             color = 'green')+
   geom_point(aes(x = plotData$squarerootTime, y = plotData$infiltration),
     color = 'black')+
   geom_point(aes(x = plotData2$squarerootTime, y = plotData2$infiltration),
